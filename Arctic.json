@@ -1,0 +1,995 @@
+{
+    "version": 8,
+    "name": "Arctic",
+    "metadata": {
+        "mapbox:groups": {
+            "1443214048567.5933": {
+                "name": "Roads",
+                "collapsed": false
+            },
+            "1443214060249.7083": {
+                "name": "Country labels",
+                "collapsed": false
+            },
+            "1443641868142.1404": {
+                "name": "Place labels",
+                "collapsed": true
+            },
+            "1443714195081.3242": {
+                "name": "Admin boundaries"
+            }
+        }
+    },
+    "center": [
+        0,
+        0
+    ],
+    "zoom": 3,
+    "bearing": 0,
+    "pitch": 0,
+    "sources": {
+        "mapbox://aj.caaa01d5": {
+            "url": "mapbox://aj.caaa01d5",
+            "type": "vector"
+        },
+        "mapbox://aj.6qrq6fuv": {
+            "url": "mapbox://aj.6qrq6fuv",
+            "type": "raster"
+        },
+        "mapbox://aj.9w4oetti": {
+            "url": "mapbox://aj.9w4oetti",
+            "type": "vector"
+        },
+        "mapbox://aj.dxt03l6r": {
+            "url": "mapbox://aj.dxt03l6r",
+            "type": "vector"
+        }
+    },
+    "sprite": "mapbox://sprites/maper/cihpz0s74001ibnm3yf3bgrdu",
+    "glyphs": "mapbox://fonts/maper/{fontstack}/{range}.pbf",
+    "layers": [
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "type": "raster",
+            "source": "mapbox://aj.6qrq6fuv",
+            "id": "Bathymetry",
+            "paint": {}
+        },
+        {
+            "id": "Water tint",
+            "type": "background",
+            "paint": {
+                "background-color": "rgba(108,203,230,1)",
+                "background-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            1.5,
+                            1
+                        ],
+                        [
+                            3,
+                            0.5
+                        ]
+                    ]
+                }
+            },
+            "interactive": true
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "line-cap": "round",
+                "line-join": "round",
+                "visibility": "visible"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Polygon"
+            ],
+            "type": "line",
+            "source": "mapbox://aj.caaa01d5",
+            "id": "Land shadow",
+            "paint": {
+                "line-color": "rgba(26,72,117,1)",
+                "line-width": 3,
+                "line-translate": [
+                    0,
+                    0.5
+                ],
+                "line-translate-anchor": "viewport",
+                "line-opacity": 0.5
+            },
+            "source-layer": "land"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Polygon"
+            ],
+            "type": "fill",
+            "source": "mapbox://aj.caaa01d5",
+            "id": "Land areas",
+            "paint": {
+                "fill-color": "rgba(247,223,173,1)",
+                "fill-translate": [
+                    0,
+                    0
+                ]
+            },
+            "source-layer": "land"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Polygon"
+            ],
+            "type": "fill",
+            "source": "mapbox://aj.caaa01d5",
+            "id": "Urban areas",
+            "paint": {
+                "fill-color": "rgba(163,44,0,1)",
+                "fill-opacity": 0.1
+            },
+            "source-layer": "urban"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1443214048567.5933"
+            },
+            "filter": [
+                "in",
+                "type",
+                "Ferry Route",
+                "Ferry, seasonal"
+            ],
+            "type": "line",
+            "source": "mapbox://aj.caaa01d5",
+            "id": "Roads - ferry",
+            "paint": {
+                "line-color": "rgba(0,150,237,1)",
+                "line-dasharray": [
+                    6,
+                    2
+                ],
+                "line-opacity": {
+                    "base": 1.8,
+                    "stops": [
+                        [
+                            2,
+                            0
+                        ],
+                        [
+                            3,
+                            1
+                        ]
+                    ]
+                },
+                "line-width": 0.75
+            },
+            "source-layer": "roads"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1443214048567.5933"
+            },
+            "filter": [
+                "in",
+                "type",
+                "Beltway",
+                "Bypass",
+                "Road",
+                "Track",
+                "Unknown"
+            ],
+            "type": "line",
+            "source": "mapbox://aj.caaa01d5",
+            "id": "Roads - other",
+            "paint": {
+                "line-color": "rgba(196,196,157,1)",
+                "line-opacity": {
+                    "base": 1.8,
+                    "stops": [
+                        [
+                            2,
+                            0
+                        ],
+                        [
+                            3,
+                            1
+                        ]
+                    ]
+                },
+                "line-width": 0.75
+            },
+            "source-layer": "roads"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1443214048567.5933"
+            },
+            "filter": [
+                "==",
+                "type",
+                "Secondary Highway"
+            ],
+            "type": "line",
+            "source": "mapbox://aj.caaa01d5",
+            "id": "Roads - secondary",
+            "paint": {
+                "line-color": "rgba(222,150,91,1)",
+                "line-opacity": {
+                    "base": 1.8,
+                    "stops": [
+                        [
+                            2,
+                            0
+                        ],
+                        [
+                            3,
+                            1
+                        ]
+                    ]
+                },
+                "line-width": 0.75
+            },
+            "source-layer": "roads"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1443214048567.5933"
+            },
+            "filter": [
+                "==",
+                "type",
+                "Major Highway"
+            ],
+            "type": "line",
+            "source": "mapbox://aj.caaa01d5",
+            "id": "Roads - major",
+            "paint": {
+                "line-color": "rgba(184,101,99,1)",
+                "line-opacity": {
+                    "base": 1.8,
+                    "stops": [
+                        [
+                            2,
+                            0
+                        ],
+                        [
+                            3,
+                            1
+                        ]
+                    ]
+                },
+                "line-width": 0.75
+            },
+            "source-layer": "roads"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "filter": [
+                "==",
+                "year",
+                1979
+            ],
+            "type": "fill",
+            "source": "mapbox://aj.9w4oetti",
+            "id": "Ice Extent",
+            "paint": {
+                "fill-color": "#fff",
+                "fill-outline-color": "rgba(22,137,199,1)",
+                "fill-opacity": 0.75
+            },
+            "source-layer": "ice_3995_3857"
+        },
+        {
+            "interactive": true,
+            "minzoom": 1,
+            "layout": {
+                "visibility": "visible"
+            },
+            "type": "line",
+            "source": "mapbox://aj.caaa01d5",
+            "id": "Grid lines",
+            "paint": {
+                "line-color": "rgba(3,17,61,1)",
+                "line-opacity": 0.1
+            },
+            "source-layer": "grid"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "type": "line",
+            "source": "mapbox://aj.caaa01d5",
+            "id": "State & province lines",
+            "paint": {
+                "line-color": "#fff",
+                "line-dasharray": [
+                    6,
+                    2,
+                    2,
+                    2
+                ]
+            },
+            "source-layer": "state_boundaries",
+            "metadata": {
+                "mapbox:group": "1443714195081.3242"
+            }
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "type": "line",
+            "source": "mapbox://aj.caaa01d5",
+            "id": "Country lines",
+            "paint": {
+                "line-color": "#fff",
+                "line-width": {
+                    "base": 1.5,
+                    "stops": [
+                        [
+                            2,
+                            1
+                        ],
+                        [
+                            8,
+                            6
+                        ]
+                    ]
+                },
+                "line-opacity": 1
+            },
+            "source-layer": "country_boundaries",
+            "metadata": {
+                "mapbox:group": "1443714195081.3242"
+            }
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "type": "line",
+            "source": "mapbox://aj.dxt03l6r",
+            "id": "Shipping routes",
+            "paint": {
+                "line-color": "rgba(0,12,61,1)",
+                "line-width": {
+                    "base": 1.3,
+                    "stops": [
+                        [
+                            0,
+                            1
+                        ],
+                        [
+                            10,
+                            6
+                        ]
+                    ]
+                },
+                "line-dasharray": [
+                    1,
+                    1
+                ]
+            },
+            "source-layer": "routes_3995_3857_clean"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "$type",
+                    "LineString",
+                    "Polygon",
+                    "Point"
+                ],
+                [
+                    "==",
+                    "name",
+                    "Arctic Circle"
+                ]
+            ],
+            "type": "line",
+            "source": "mapbox://aj.caaa01d5",
+            "id": "Arctic Circle",
+            "paint": {
+                "line-color": "rgba(0,52,125,1)",
+                "line-opacity": 0.25,
+                "line-dasharray": [
+                    8,
+                    2
+                ]
+            },
+            "source-layer": "geographic_lines"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "type": "fill",
+            "source": "mapbox://aj.caaa01d5",
+            "id": "Mask (labels above, shapes below)",
+            "paint": {
+                "fill-color": "rgba(67,122,161,1)"
+            },
+            "source-layer": "mask"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "line-join": "round"
+            },
+            "type": "line",
+            "source": "mapbox://aj.caaa01d5",
+            "id": "Mask outline",
+            "paint": {
+                "line-width": 3,
+                "line-color": "rgba(45,100,145,1)"
+            },
+            "source-layer": "mask"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "text-anchor": "bottom",
+                "text-field": "{name}",
+                "symbol-placement": "line",
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            3,
+                            7
+                        ],
+                        [
+                            10,
+                            12
+                        ]
+                    ]
+                },
+                "text-transform": "uppercase",
+                "text-letter-spacing": 0.55,
+                "text-offset": [
+                    0,
+                    -0.2
+                ],
+                "symbol-spacing": 400
+            },
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "$type",
+                    "LineString",
+                    "Polygon",
+                    "Point"
+                ],
+                [
+                    "==",
+                    "name",
+                    "Arctic Circle"
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://aj.caaa01d5",
+            "id": "Arctic Circle label",
+            "paint": {
+                "text-color": "rgba(66,122,168,1)",
+                "text-halo-blur": 0
+            },
+            "source-layer": "geographic_lines"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "symbol-placement": "line",
+                "text-field": "{Name}",
+                "text-size": {
+                    "base": 1.5,
+                    "stops": [
+                        [
+                            3,
+                            10
+                        ],
+                        [
+                            6,
+                            14
+                        ]
+                    ]
+                },
+                "text-offset": [
+                    0,
+                    -0.75
+                ],
+                "text-letter-spacing": 0.05,
+                "text-font": [
+                    "Mark Offc Pro Medium",
+                    "Arial Unicode MS Regular"
+                ]
+            },
+            "type": "symbol",
+            "source": "mapbox://aj.dxt03l6r",
+            "id": "Shipping route names",
+            "paint": {
+                "text-color": "rgba(0,12,61,1)",
+                "text-halo-color": "#fff",
+                "text-halo-width": 1
+            },
+            "source-layer": "routes_3995_3857_clean"
+        },
+        {
+            "interactive": true,
+            "minzoom": 1,
+            "layout": {
+                "symbol-placement": "point",
+                "visibility": "visible",
+                "text-field": "{name}",
+                "text-font": [
+                    "Mark Offc Pro Book",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            10
+                        ],
+                        [
+                            10,
+                            16
+                        ]
+                    ]
+                }
+            },
+            "metadata": {
+                "mapbox:group": "1443641868142.1404"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "in",
+                    "scalerank",
+                    10,
+                    9,
+                    8
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://aj.caaa01d5",
+            "id": "Cities - small",
+            "paint": {
+                "text-halo-color": "rgba(255,255,255,1)",
+                "text-color": "#000",
+                "text-halo-width": 1,
+                "text-halo-blur": 1
+            },
+            "source-layer": "place_label"
+        },
+        {
+            "interactive": true,
+            "minzoom": 1,
+            "layout": {
+                "symbol-placement": "point",
+                "visibility": "visible",
+                "text-field": "{name}",
+                "text-font": [
+                    "Mark Offc Pro Book",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            4,
+                            8
+                        ],
+                        [
+                            10,
+                            16
+                        ]
+                    ]
+                }
+            },
+            "metadata": {
+                "mapbox:group": "1443641868142.1404"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "in",
+                    "scalerank",
+                    4,
+                    6,
+                    7
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://aj.caaa01d5",
+            "id": "Cities - medium",
+            "paint": {
+                "text-halo-color": "rgba(255,255,255,1)",
+                "text-color": "#000",
+                "text-halo-width": 1,
+                "text-halo-blur": 1
+            },
+            "source-layer": "place_label"
+        },
+        {
+            "interactive": true,
+            "minzoom": 1,
+            "layout": {
+                "symbol-placement": "point",
+                "visibility": "visible",
+                "text-field": "{name}",
+                "text-font": [
+                    "Mark Offc Pro Book",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            10,
+                            16
+                        ]
+                    ]
+                }
+            },
+            "metadata": {
+                "mapbox:group": "1443641868142.1404"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "in",
+                    "scalerank",
+                    2,
+                    3
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://aj.caaa01d5",
+            "id": "Cities - large",
+            "paint": {
+                "text-halo-color": "rgba(255,255,255,1)",
+                "text-color": "#000",
+                "text-halo-width": 1,
+                "text-halo-blur": 1
+            },
+            "source-layer": "place_label"
+        },
+        {
+            "interactive": true,
+            "minzoom": 1,
+            "layout": {
+                "symbol-placement": "point",
+                "visibility": "visible",
+                "text-field": "{name}",
+                "text-font": [
+                    "Mark Offc Pro Book",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            10,
+                            20
+                        ]
+                    ]
+                },
+                "symbol-avoid-edges": false,
+                "symbol-spacing": 10
+            },
+            "metadata": {
+                "mapbox:group": "1443641868142.1404"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "in",
+                    "scalerank",
+                    0,
+                    1
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://aj.caaa01d5",
+            "id": "Cities - largest",
+            "paint": {
+                "text-halo-color": "rgba(255,255,255,1)",
+                "text-color": "#000",
+                "text-halo-width": 1,
+                "text-halo-blur": 1
+            },
+            "source-layer": "place_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "text-field": "{name}",
+                "text-font": [
+                    "Mark Offc Pro Bold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-size": {
+                    "base": 0.8,
+                    "stops": [
+                        [
+                            5,
+                            7
+                        ],
+                        [
+                            10,
+                            16
+                        ]
+                    ]
+                },
+                "text-letter-spacing": {
+                    "base": 1.75,
+                    "stops": [
+                        [
+                            4,
+                            0.1
+                        ],
+                        [
+                            6,
+                            0.5
+                        ]
+                    ]
+                },
+                "text-max-width": 6,
+                "text-transform": "uppercase"
+            },
+            "metadata": {
+                "mapbox:group": "1443214060249.7083"
+            },
+            "filter": [
+                "in",
+                "scalerank",
+                6,
+                5,
+                3
+            ],
+            "type": "symbol",
+            "source": "mapbox://aj.caaa01d5",
+            "id": "Countries - small",
+            "paint": {
+                "text-color": "#555",
+                "text-halo-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            4,
+                            "rgba(255,255,255,0)"
+                        ],
+                        [
+                            6,
+                            "rgba(255,255,255,1)"
+                        ]
+                    ]
+                },
+                "text-halo-width": 2
+            },
+            "source-layer": "country_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "text-field": "{name}",
+                "text-font": [
+                    "Mark Offc Pro Bold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-size": {
+                    "base": 0.8,
+                    "stops": [
+                        [
+                            4,
+                            7
+                        ],
+                        [
+                            10,
+                            18
+                        ]
+                    ]
+                },
+                "text-letter-spacing": {
+                    "base": 1.75,
+                    "stops": [
+                        [
+                            4,
+                            0.1
+                        ],
+                        [
+                            6,
+                            0.5
+                        ]
+                    ]
+                },
+                "text-max-width": 6,
+                "text-transform": "uppercase"
+            },
+            "metadata": {
+                "mapbox:group": "1443214060249.7083"
+            },
+            "filter": [
+                "==",
+                "scalerank",
+                1
+            ],
+            "type": "symbol",
+            "source": "mapbox://aj.caaa01d5",
+            "id": "Countries - medium",
+            "paint": {
+                "text-color": "#555",
+                "text-halo-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            4,
+                            "rgba(255,255,255,0)"
+                        ],
+                        [
+                            6,
+                            "rgba(255,255,255,1)"
+                        ]
+                    ]
+                },
+                "text-halo-width": 2
+            },
+            "source-layer": "country_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "text-field": "{name}",
+                "text-font": [
+                    "Mark Offc Pro Bold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-size": {
+                    "base": 0.8,
+                    "stops": [
+                        [
+                            3,
+                            7
+                        ],
+                        [
+                            10,
+                            20
+                        ]
+                    ]
+                },
+                "text-letter-spacing": {
+                    "base": 1.75,
+                    "stops": [
+                        [
+                            4,
+                            0.1
+                        ],
+                        [
+                            6,
+                            0.5
+                        ]
+                    ]
+                },
+                "text-max-width": 6,
+                "text-transform": "uppercase"
+            },
+            "metadata": {
+                "mapbox:group": "1443214060249.7083"
+            },
+            "filter": [
+                "==",
+                "scalerank",
+                0
+            ],
+            "type": "symbol",
+            "source": "mapbox://aj.caaa01d5",
+            "id": "Countries - large",
+            "paint": {
+                "text-color": "#555",
+                "text-halo-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            4,
+                            "rgba(255,255,255,0)"
+                        ],
+                        [
+                            6,
+                            "rgba(255,255,255,1)"
+                        ]
+                    ]
+                },
+                "text-halo-width": 2
+            },
+            "source-layer": "country_label"
+        }
+    ],
+    "created": "2015-12-03T08:18:50.950Z",
+    "id": "cihpz0s74001ibnm3yf3bgrdu",
+    "modified": "2015-12-03T08:18:50.950Z",
+    "owner": "maper",
+    "draft": false
+}

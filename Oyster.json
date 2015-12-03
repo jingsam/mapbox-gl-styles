@@ -1,0 +1,2000 @@
+{
+    "version": 8,
+    "name": "Oyster",
+    "metadata": {
+        "mapbox:groups": {
+            "1444955913044.6504": {
+                "name": "Oysters",
+                "collapsed": false
+            },
+            "1445372796372.2078": {
+                "name": "Watersheds",
+                "collapsed": false
+            },
+            "1444898807091.4282": {
+                "name": "Streets",
+                "collapsed": true
+            },
+            "1445376278473.3604": {
+                "name": "Group"
+            },
+            "1447234002657.9595": {
+                "name": "Longhurst",
+                "collapsed": true
+            },
+            "1444898793719.3914": {
+                "name": "Terrain",
+                "collapsed": true
+            },
+            "1445393236318.7542": {
+                "name": "Political",
+                "collapsed": true
+            },
+            "1445376251930.4856": {
+                "name": "Terrain",
+                "collapsed": true
+            },
+            "1445372837969.9268": {
+                "name": "Water",
+                "collapsed": true
+            }
+        }
+    },
+    "center": [
+        -99.38990670661266,
+        42.56276309339296
+    ],
+    "zoom": 3.2177320523397572,
+    "bearing": 0.012515376770579678,
+    "pitch": 0,
+    "sources": {
+        "mapbox://fogfish.7oob8n5q": {
+            "url": "mapbox://fogfish.7oob8n5q",
+            "type": "vector"
+        },
+        "mapbox://fogfish.83xl4bu9": {
+            "url": "mapbox://fogfish.83xl4bu9",
+            "type": "vector"
+        },
+        "mapbox://fogfish.9hmr3rh6": {
+            "url": "mapbox://fogfish.9hmr3rh6",
+            "type": "vector"
+        },
+        "mapbox://mapbox.mapbox-streets-v6": {
+            "url": "mapbox://mapbox.mapbox-streets-v6",
+            "type": "vector"
+        },
+        "mapbox://fogfish.1nqsbqyq": {
+            "url": "mapbox://fogfish.1nqsbqyq",
+            "type": "vector"
+        },
+        "mapbox://fogfish.bvawl2ul": {
+            "url": "mapbox://fogfish.bvawl2ul",
+            "type": "vector"
+        },
+        "mapbox://fogfish.4v6v9gyr": {
+            "url": "mapbox://fogfish.4v6v9gyr",
+            "type": "vector"
+        },
+        "mapbox://fogfish.12496end": {
+            "url": "mapbox://fogfish.12496end",
+            "type": "vector"
+        },
+        "mapbox://fogfish.1m6u766o": {
+            "url": "mapbox://fogfish.1m6u766o",
+            "type": "vector"
+        },
+        "mapbox://fogfish.4ja49a58": {
+            "url": "mapbox://fogfish.4ja49a58",
+            "type": "vector"
+        },
+        "mapbox://fogfish.4h2r3oot": {
+            "url": "mapbox://fogfish.4h2r3oot",
+            "type": "vector"
+        },
+        "mapbox://fogfish.44b827ih": {
+            "url": "mapbox://fogfish.44b827ih",
+            "type": "vector"
+        },
+        "mapbox://fogfish.523w9v0l": {
+            "url": "mapbox://fogfish.523w9v0l",
+            "type": "vector"
+        },
+        "mapbox://mapbox.mapbox-terrain-v2": {
+            "url": "mapbox://mapbox.mapbox-terrain-v2",
+            "type": "vector"
+        }
+    },
+    "sprite": "mapbox://sprites/maper/cihpzc653001gbrlznbcdvux5",
+    "glyphs": "mapbox://fonts/maper/{fontstack}/{range}.pbf",
+    "layers": [
+        {
+            "type": "background",
+            "paint": {
+                "background-color": "#001420"
+            },
+            "layout": {
+                "visibility": "visible"
+            },
+            "id": "background",
+            "interactive": true
+        },
+        {
+            "layout": {
+                "visibility": "visible"
+            },
+            "type": "fill",
+            "source": "mapbox://fogfish.4h2r3oot",
+            "id": "longhurst-v4-2010 bg",
+            "paint": {
+                "fill-color": "#112234",
+                "fill-opacity": 0.2
+            },
+            "source-layer": "longhurst_v4_2010",
+            "interactive": true,
+            "metadata": {
+                "mapbox:group": "1447234002657.9595"
+            }
+        },
+        {
+            "layout": {
+                "visibility": "none"
+            },
+            "type": "line",
+            "source": "mapbox://fogfish.4h2r3oot",
+            "id": "longhurst-v4-2010",
+            "paint": {
+                "line-color": "rgba(66,117,42,1)"
+            },
+            "source-layer": "longhurst_v4_2010",
+            "interactive": true,
+            "metadata": {
+                "mapbox:group": "1447234002657.9595"
+            }
+        },
+        {
+            "layout": {
+                "visibility": "visible"
+            },
+            "type": "line",
+            "source": "mapbox://fogfish.4h2r3oot",
+            "id": "longhurst-v4-2010 line orig",
+            "paint": {
+                "line-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            "rgba(29,64,92,1)"
+                        ],
+                        [
+                            8,
+                            "rgba(92,22,62,1)"
+                        ]
+                    ]
+                },
+                "line-opacity": 0.3
+            },
+            "source-layer": "longhurst_v4_2010",
+            "interactive": true,
+            "metadata": {
+                "mapbox:group": "1447234002657.9595"
+            }
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1445376251930.4856"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Polygon"
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-terrain-v2",
+            "id": "contour",
+            "paint": {
+                "line-color": "#8a3d3d",
+                "line-opacity": 0.2
+            },
+            "source-layer": "contour"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1445376251930.4856"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Polygon"
+            ],
+            "type": "fill",
+            "source": "mapbox://mapbox.mapbox-terrain-v2",
+            "id": "hillshade",
+            "paint": {
+                "fill-opacity": 0.2,
+                "fill-color": "#18183d"
+            },
+            "source-layer": "hillshade"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1445376251930.4856"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Polygon"
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-terrain-v2",
+            "id": "landcover",
+            "paint": {
+                "line-color": "rgba(28,28,28,1)"
+            },
+            "source-layer": "landcover"
+        },
+        {
+            "layout": {
+                "visibility": "visible"
+            },
+            "type": "line",
+            "source": "mapbox://fogfish.523w9v0l",
+            "id": "ne-10m-admin-0-countries",
+            "paint": {
+                "line-color": "#4d4d4d",
+                "line-opacity": 0.08,
+                "line-dasharray": [
+                    1,
+                    0,
+                    1
+                ]
+            },
+            "source-layer": "ne_10m_admin_0_countries",
+            "interactive": true,
+            "metadata": {
+                "mapbox:group": "1445393236318.7542"
+            }
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "icon-image": "circle-12",
+                "text-field": "{name}",
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            5,
+                            0
+                        ],
+                        [
+                            6,
+                            9
+                        ],
+                        [
+                            10,
+                            10
+                        ]
+                    ]
+                },
+                "text-transform": "uppercase",
+                "text-font": [
+                    "Open Sans Regular",
+                    "Arial Unicode MS Regular"
+                ],
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1445393236318.7542"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "state-label",
+            "paint": {
+                "text-color": "rgba(166,166,166,1)",
+                "text-halo-width": 0,
+                "text-halo-blur": 0
+            },
+            "source-layer": "state_label"
+        },
+        {
+            "layout": {
+                "visibility": "none"
+            },
+            "type": "line",
+            "source": "mapbox://fogfish.bvawl2ul",
+            "id": "ne-10m-coastline: gradient",
+            "paint": {
+                "line-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            "#594"
+                        ],
+                        [
+                            8,
+                            "#708ca9"
+                        ],
+                        [
+                            12,
+                            "#708ca9"
+                        ]
+                    ]
+                },
+                "line-width": 0.05,
+                "line-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0.5
+                        ],
+                        [
+                            8,
+                            0.22
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "ne_10m_coastline",
+            "interactive": true
+        },
+        {
+            "layout": {
+                "visibility": "visible"
+            },
+            "type": "line",
+            "source": "mapbox://fogfish.bvawl2ul",
+            "id": "ne-10m-coastline: frost white",
+            "paint": {
+                "line-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            5,
+                            "#abc"
+                        ],
+                        [
+                            15,
+                            "#708ca9"
+                        ],
+                        [
+                            22,
+                            "#708ca9"
+                        ]
+                    ]
+                },
+                "line-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0.4
+                        ],
+                        [
+                            9,
+                            0.2
+                        ],
+                        [
+                            10,
+                            0
+                        ]
+                    ]
+                },
+                "line-width": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            1
+                        ],
+                        [
+                            10,
+                            0.1
+                        ]
+                    ]
+                },
+                "line-blur": 1
+            },
+            "source-layer": "ne_10m_coastline",
+            "interactive": true
+        },
+        {
+            "id": "ne-10m-coastline: 7FFF00",
+            "paint": {
+                "line-width": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0.5
+                        ],
+                        [
+                            10,
+                            0.3
+                        ]
+                    ]
+                },
+                "line-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0.4
+                        ],
+                        [
+                            10,
+                            0.2
+                        ]
+                    ]
+                },
+                "line-color": "#7fff00"
+            },
+            "interactive": true,
+            "ref": "ne-10m-coastline: gradient"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "nextDropPoint": false,
+            "metadata": {
+                "mapbox:group": "1445372837969.9268"
+            },
+            "type": "line",
+            "source": "mapbox://fogfish.1nqsbqyq",
+            "id": "ne-10m-rivers-NA",
+            "paint": {
+                "line-color": "rgba(17,102,136,1)",
+                "line-opacity": 0.5
+            },
+            "source-layer": "ne_10m_rivers_north_america"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "text-size": 11,
+                "text-transform": "none",
+                "symbol-spacing": 800,
+                "text-font": [
+                    "Open Sans Italic",
+                    "Arial Unicode MS Regular"
+                ],
+                "symbol-placement": "line",
+                "text-justify": "left",
+                "visibility": "visible",
+                "text-offset": [
+                    0,
+                    -0.2
+                ],
+                "text-rotation-alignment": "map",
+                "text-anchor": "bottom",
+                "text-keep-upright": true,
+                "text-field": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            8,
+                            ""
+                        ],
+                        [
+                            9,
+                            "{name_full}"
+                        ],
+                        [
+                            22,
+                            "{name_full}"
+                        ]
+                    ]
+                },
+                "text-max-width": 30
+            },
+            "nextDropPoint": false,
+            "metadata": {
+                "mapbox:group": "1445372837969.9268"
+            },
+            "type": "symbol",
+            "source": "mapbox://fogfish.1nqsbqyq",
+            "id": "ne-10m-rivers-NA: labels",
+            "paint": {
+                "text-color": "rgba(17,102,136,1)"
+            },
+            "source-layer": "ne_10m_rivers_north_america"
+        },
+        {
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1445372837969.9268"
+            },
+            "type": "fill",
+            "source": "mapbox://fogfish.12496end",
+            "id": "canada-waterbodies-ac-15m",
+            "paint": {
+                "fill-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            "#001420"
+                        ],
+                        [
+                            5,
+                            "#76B1DD"
+                        ]
+                    ]
+                },
+                "fill-opacity": 0.9
+            },
+            "source-layer": "Canada-waterbodies-AC_15M",
+            "interactive": true
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "nextDropPoint": false,
+            "metadata": {
+                "mapbox:group": "1445372837969.9268"
+            },
+            "type": "fill",
+            "source": "mapbox://fogfish.4ja49a58",
+            "id": "ne-10m-lakes-north-america",
+            "paint": {
+                "fill-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            "#001420"
+                        ],
+                        [
+                            5,
+                            "#76B1DD"
+                        ]
+                    ]
+                },
+                "fill-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            1
+                        ],
+                        [
+                            8,
+                            1
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "ne_10m_lakes_north_america"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "nextDropPoint": false,
+            "metadata": {
+                "mapbox:group": "1445372837969.9268"
+            },
+            "type": "fill",
+            "source": "mapbox://fogfish.1m6u766o",
+            "id": "us-lakes",
+            "paint": {
+                "fill-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            "#001420"
+                        ],
+                        [
+                            5,
+                            "#76B1DD"
+                        ]
+                    ]
+                },
+                "fill-opacity": 0.9,
+                "fill-outline-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            "#001420"
+                        ],
+                        [
+                            8,
+                            "#76B1DD"
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "US-lakes"
+        },
+        {
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1445372837969.9268"
+            },
+            "type": "fill",
+            "source": "mapbox://fogfish.9hmr3rh6",
+            "id": "mex-water-areas-dcw",
+            "paint": {
+                "fill-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            "#001420"
+                        ],
+                        [
+                            5,
+                            "#76B1DD"
+                        ]
+                    ]
+                },
+                "fill-opacity": 0.9
+            },
+            "source-layer": "MEX_water_areas_dcw",
+            "interactive": true
+        },
+        {
+            "layout": {
+                "visibility": "none"
+            },
+            "type": "line",
+            "source": "mapbox://fogfish.83xl4bu9",
+            "id": "salishSea-4677",
+            "paint": {
+                "line-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            "rgba(138,61,61,1)"
+                        ],
+                        [
+                            11,
+                            "rgba(138,61,61,1)"
+                        ],
+                        [
+                            12,
+                            "rgba(153,189,194,1)"
+                        ],
+                        [
+                            13,
+                            "rgba(138,61,61,1)"
+                        ],
+                        [
+                            22,
+                            "rgba(138,61,61,1)"
+                        ]
+                    ]
+                },
+                "line-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            6,
+                            0.5
+                        ]
+                    ]
+                },
+                "line-width": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            6,
+                            0.5
+                        ],
+                        [
+                            9,
+                            0.75
+                        ],
+                        [
+                            12,
+                            0.9
+                        ],
+                        [
+                            15,
+                            1
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "4677",
+            "interactive": true,
+            "metadata": {
+                "mapbox:group": "1445372796372.2078"
+            }
+        },
+        {
+            "id": "salishSea-4677 F50",
+            "paint": {
+                "line-color": "#f50",
+                "line-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            6,
+                            0.5
+                        ]
+                    ]
+                },
+                "line-width": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            6,
+                            0.5
+                        ],
+                        [
+                            9,
+                            0.75
+                        ],
+                        [
+                            12,
+                            0.9
+                        ],
+                        [
+                            15,
+                            1
+                        ]
+                    ]
+                },
+                "line-blur": 0
+            },
+            "interactive": true,
+            "metadata": {
+                "mapbox:group": "1445372796372.2078"
+            },
+            "layout": {
+                "visibility": "visible"
+            },
+            "type": "line",
+            "source": "mapbox://fogfish.83xl4bu9",
+            "source-layer": "4677"
+        },
+        {
+            "layout": {
+                "visibility": "visible"
+            },
+            "type": "fill",
+            "source": "mapbox://fogfish.83xl4bu9",
+            "id": "salishSea-4677 fill",
+            "paint": {
+                "fill-color": "rgba(115,96,96,1)",
+                "fill-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0.5
+                        ],
+                        [
+                            8,
+                            0
+                        ]
+                    ]
+                },
+                "fill-outline-color": "#000000"
+            },
+            "source-layer": "4677",
+            "interactive": true,
+            "metadata": {
+                "mapbox:group": "1445372796372.2078"
+            }
+        },
+        {
+            "layout": {
+                "visibility": "none"
+            },
+            "type": "line",
+            "source": "mapbox://fogfish.4v6v9gyr",
+            "id": "gulfOfMaine-watershed-us",
+            "paint": {
+                "line-color": "#8a3d3d",
+                "line-opacity": 0.46
+            },
+            "source-layer": "GOM_watershed_us",
+            "interactive": true,
+            "metadata": {
+                "mapbox:group": "1445372796372.2078"
+            }
+        },
+        {
+            "layout": {
+                "visibility": "none"
+            },
+            "type": "line",
+            "source": "mapbox://fogfish.7oob8n5q",
+            "id": "chesapeakeBay-hr02",
+            "paint": {
+                "line-color": "#8a3d3d",
+                "line-opacity": 0.46
+            },
+            "source-layer": "basin_hr02",
+            "interactive": true,
+            "metadata": {
+                "mapbox:group": "1445372796372.2078"
+            }
+        },
+        {
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1444955913044.6504"
+            },
+            "type": "circle",
+            "source": "mapbox://fogfish.44b827ih",
+            "id": "oyster-jsoninput-0.05 100px",
+            "paint": {
+                "circle-radius": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            100
+                        ],
+                        [
+                            22,
+                            100
+                        ]
+                    ]
+                },
+                "circle-color": "#1388d1",
+                "circle-opacity": 0.05,
+                "circle-blur": 5
+            },
+            "source-layer": "oyster-jsonInput",
+            "interactive": true
+        },
+        {
+            "metadata": {
+                "mapbox:group": "1444955913044.6504"
+            },
+            "id": "oyster-jsoninput 0.04",
+            "paint": {
+                "circle-color": "#0F0",
+                "circle-opacity": 0.04,
+                "circle-translate": [
+                    0,
+                    0
+                ],
+                "circle-translate-anchor": "viewport",
+                "circle-radius": 10
+            },
+            "interactive": true,
+            "ref": "oyster-jsoninput-0.05 100px"
+        },
+        {
+            "metadata": {
+                "mapbox:group": "1444955913044.6504"
+            },
+            "id": "oyster-jsoninput 0.02",
+            "paint": {
+                "circle-color": "#0C1",
+                "circle-opacity": 0.02,
+                "circle-radius": 30
+            },
+            "interactive": true,
+            "ref": "oyster-jsoninput-0.05 100px"
+        },
+        {
+            "metadata": {
+                "mapbox:group": "1444955913044.6504"
+            },
+            "id": "oyster-jsoninput 0.01",
+            "paint": {
+                "circle-radius": 50,
+                "circle-color": "#358BE3",
+                "circle-opacity": 0.01
+            },
+            "interactive": true,
+            "ref": "oyster-jsoninput-0.05 100px"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1444955913044.6504"
+            },
+            "filter": [
+                "==",
+                "speciesCode",
+                "CG"
+            ],
+            "type": "circle",
+            "source": "mapbox://fogfish.44b827ih",
+            "id": "oyster markers Pacific CG",
+            "paint": {
+                "circle-color": "#2A7889",
+                "circle-blur": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            2
+                        ],
+                        [
+                            10,
+                            1.5
+                        ],
+                        [
+                            11,
+                            1
+                        ]
+                    ]
+                },
+                "circle-opacity": 0.9,
+                "circle-radius": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            4,
+                            0
+                        ],
+                        [
+                            5,
+                            1
+                        ],
+                        [
+                            8,
+                            5
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "oyster-jsonInput"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1444955913044.6504"
+            },
+            "filter": [
+                "==",
+                "speciesCode",
+                "CV"
+            ],
+            "type": "circle",
+            "source": "mapbox://fogfish.44b827ih",
+            "id": "oyster markers Eastern CV",
+            "paint": {
+                "circle-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            8,
+                            "#2A7889"
+                        ],
+                        [
+                            9,
+                            "rgba(199,32,82,1)"
+                        ]
+                    ]
+                },
+                "circle-blur": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            2
+                        ],
+                        [
+                            10,
+                            1.5
+                        ],
+                        [
+                            11,
+                            1
+                        ]
+                    ]
+                },
+                "circle-opacity": 0.9,
+                "circle-radius": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            4,
+                            0
+                        ],
+                        [
+                            5,
+                            1
+                        ],
+                        [
+                            8,
+                            5
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "oyster-jsonInput"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1444955913044.6504"
+            },
+            "filter": [
+                "!in",
+                "speciesCode",
+                "CV",
+                "CG"
+            ],
+            "type": "circle",
+            "source": "mapbox://fogfish.44b827ih",
+            "id": "oyster markers Kumamoto CS",
+            "paint": {
+                "circle-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            8,
+                            "#2A7889"
+                        ],
+                        [
+                            9,
+                            "rgba(199,161,91,1)"
+                        ]
+                    ]
+                },
+                "circle-blur": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            2
+                        ],
+                        [
+                            10,
+                            1.5
+                        ],
+                        [
+                            11,
+                            1
+                        ]
+                    ]
+                },
+                "circle-opacity": 0.9,
+                "circle-radius": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            4,
+                            0
+                        ],
+                        [
+                            5,
+                            1
+                        ],
+                        [
+                            8,
+                            5
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "oyster-jsonInput"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1444955913044.6504"
+            },
+            "filter": [
+                "any",
+                [
+                    "==",
+                    "speciesCode",
+                    "OE"
+                ],
+                [
+                    "==",
+                    "species",
+                    "Ostrea edulis"
+                ]
+            ],
+            "type": "circle",
+            "source": "mapbox://fogfish.44b827ih",
+            "id": "oyster markers Belon",
+            "paint": {
+                "circle-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            8,
+                            "#2A7889"
+                        ],
+                        [
+                            9,
+                            "rgba(125,18,179,1)"
+                        ]
+                    ]
+                },
+                "circle-blur": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            2
+                        ],
+                        [
+                            10,
+                            1.5
+                        ],
+                        [
+                            11,
+                            1
+                        ]
+                    ]
+                },
+                "circle-opacity": 0.9,
+                "circle-radius": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            4,
+                            0
+                        ],
+                        [
+                            5,
+                            1
+                        ],
+                        [
+                            8,
+                            5
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "oyster-jsonInput"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1444955913044.6504"
+            },
+            "filter": [
+                "any",
+                [
+                    "==",
+                    "speciesCode",
+                    "OL"
+                ],
+                [
+                    "==",
+                    "species",
+                    "Ostrea lurida"
+                ]
+            ],
+            "type": "circle",
+            "source": "mapbox://fogfish.44b827ih",
+            "id": "oyster markers Olympia",
+            "paint": {
+                "circle-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            8,
+                            "#2A7889"
+                        ],
+                        [
+                            9,
+                            "#a2bc13"
+                        ]
+                    ]
+                },
+                "circle-blur": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            2
+                        ],
+                        [
+                            10,
+                            1.5
+                        ],
+                        [
+                            11,
+                            1
+                        ]
+                    ]
+                },
+                "circle-opacity": 0.9,
+                "circle-radius": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            4,
+                            0
+                        ],
+                        [
+                            5,
+                            1
+                        ],
+                        [
+                            8,
+                            5
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "oyster-jsonInput"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1444955913044.6504"
+            },
+            "filter": [
+                "!in",
+                "speciesCode",
+                "CG",
+                "CV",
+                "OL",
+                "CS",
+                "OE"
+            ],
+            "type": "circle",
+            "source": "mapbox://fogfish.44b827ih",
+            "id": "oyster markers Bluff NZ OC-TC",
+            "paint": {
+                "circle-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            8,
+                            "#2A7889"
+                        ],
+                        [
+                            9,
+                            "#05B8CC"
+                        ]
+                    ]
+                },
+                "circle-blur": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            2
+                        ],
+                        [
+                            10,
+                            1.5
+                        ],
+                        [
+                            11,
+                            1
+                        ]
+                    ]
+                },
+                "circle-opacity": 0.9,
+                "circle-radius": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            4,
+                            0
+                        ],
+                        [
+                            5,
+                            1
+                        ],
+                        [
+                            8,
+                            5
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "oyster-jsonInput"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "none"
+            },
+            "metadata": {
+                "mapbox:group": "1444955913044.6504"
+            },
+            "filter": [
+                "==",
+                "rank",
+                64
+            ],
+            "type": "circle",
+            "source": "mapbox://fogfish.44b827ih",
+            "id": "oyster-json markers: 64 orig",
+            "paint": {
+                "circle-color": "#2A7889",
+                "circle-blur": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            2
+                        ],
+                        [
+                            10,
+                            1.5
+                        ],
+                        [
+                            11,
+                            1
+                        ]
+                    ]
+                },
+                "circle-opacity": 0.9,
+                "circle-radius": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            4,
+                            0
+                        ],
+                        [
+                            5,
+                            1
+                        ],
+                        [
+                            8,
+                            5
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "oyster-jsonInput"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "none"
+            },
+            "metadata": {
+                "mapbox:group": "1444955913044.6504"
+            },
+            "filter": [
+                "==",
+                "rank",
+                1
+            ],
+            "type": "circle",
+            "source": "mapbox://fogfish.44b827ih",
+            "id": "oyster-json markers: 1 orig",
+            "paint": {
+                "circle-color": "rgba(140,46,74,1)",
+                "circle-blur": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            2
+                        ],
+                        [
+                            10,
+                            1.5
+                        ],
+                        [
+                            11,
+                            1
+                        ]
+                    ]
+                },
+                "circle-opacity": 0.9,
+                "circle-radius": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            4,
+                            0
+                        ],
+                        [
+                            5,
+                            1
+                        ],
+                        [
+                            8,
+                            5
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "oyster-jsonInput"
+        },
+        {
+            "interactive": true,
+            "minzoom": 5,
+            "layout": {
+                "text-line-height": 1,
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            5,
+                            0
+                        ],
+                        [
+                            6,
+                            6
+                        ],
+                        [
+                            9,
+                            13.5
+                        ]
+                    ]
+                },
+                "text-allow-overlap": false,
+                "text-ignore-placement": false,
+                "text-transform": "none",
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "symbol-placement": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            "point"
+                        ],
+                        [
+                            22,
+                            "point"
+                        ]
+                    ]
+                },
+                "text-justify": "left",
+                "text-padding": 2,
+                "visibility": "visible",
+                "text-offset": [
+                    0.5,
+                    0
+                ],
+                "text-rotation-alignment": "viewport",
+                "text-anchor": "left",
+                "text-field": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            7,
+                            ""
+                        ],
+                        [
+                            8,
+                            "{marketName}"
+                        ],
+                        [
+                            22,
+                            "{marketName}"
+                        ]
+                    ]
+                },
+                "text-max-width": 30
+            },
+            "metadata": {
+                "mapbox:group": "1444955913044.6504"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "==",
+                    "rank",
+                    64
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://fogfish.44b827ih",
+            "id": "oyster-labels: rank 64",
+            "paint": {
+                "text-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            "rgba(156,156,156,1)"
+                        ],
+                        [
+                            10,
+                            "#d1d1d1"
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "oyster-jsonInput"
+        },
+        {
+            "interactive": true,
+            "minzoom": 5,
+            "layout": {
+                "text-line-height": 1,
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            5,
+                            0
+                        ],
+                        [
+                            6,
+                            6
+                        ],
+                        [
+                            9,
+                            13.5
+                        ]
+                    ]
+                },
+                "text-allow-overlap": false,
+                "text-ignore-placement": false,
+                "text-transform": "none",
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "symbol-placement": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            "point"
+                        ],
+                        [
+                            22,
+                            "point"
+                        ]
+                    ]
+                },
+                "text-justify": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            10,
+                            "right"
+                        ],
+                        [
+                            14,
+                            "left"
+                        ]
+                    ]
+                },
+                "text-padding": 2,
+                "visibility": "visible",
+                "text-offset": [
+                    0.5,
+                    0
+                ],
+                "text-rotation-alignment": "viewport",
+                "text-anchor": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            10,
+                            "right"
+                        ],
+                        [
+                            14,
+                            "left"
+                        ]
+                    ]
+                },
+                "text-field": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            7,
+                            ""
+                        ],
+                        [
+                            8,
+                            "{marketName}"
+                        ],
+                        [
+                            22,
+                            "{marketName}"
+                        ]
+                    ]
+                },
+                "text-max-width": 30
+            },
+            "metadata": {
+                "mapbox:group": "1444955913044.6504"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "in",
+                    "marketName",
+                    "Marin Miyagi",
+                    "Tomales Bay",
+                    "Hog Island Atlantic"
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://fogfish.44b827ih",
+            "id": "oyster-leftLabels Tomales",
+            "paint": {
+                "text-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            "rgba(156,156,156,1)"
+                        ],
+                        [
+                            10,
+                            "#d1d1d1"
+                        ]
+                    ]
+                },
+                "text-translate": [
+                    -8,
+                    0
+                ]
+            },
+            "source-layer": "oyster-jsonInput"
+        },
+        {
+            "interactive": true,
+            "minzoom": 5,
+            "layout": {
+                "text-line-height": 1,
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            5,
+                            0
+                        ],
+                        [
+                            6,
+                            6
+                        ],
+                        [
+                            9,
+                            13.5
+                        ]
+                    ]
+                },
+                "text-allow-overlap": false,
+                "text-ignore-placement": false,
+                "text-transform": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            "none"
+                        ],
+                        [
+                            22,
+                            "none"
+                        ]
+                    ]
+                },
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "symbol-placement": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            "point"
+                        ],
+                        [
+                            22,
+                            "point"
+                        ]
+                    ]
+                },
+                "text-justify": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            10,
+                            "right"
+                        ],
+                        [
+                            14,
+                            "left"
+                        ]
+                    ]
+                },
+                "text-padding": 2,
+                "visibility": "visible",
+                "text-offset": [
+                    0.5,
+                    0
+                ],
+                "text-rotation-alignment": "viewport",
+                "text-anchor": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            8,
+                            "right"
+                        ],
+                        [
+                            11,
+                            "left"
+                        ]
+                    ]
+                },
+                "text-field": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            7,
+                            ""
+                        ],
+                        [
+                            8,
+                            "{marketName}"
+                        ],
+                        [
+                            22,
+                            "{marketName}"
+                        ]
+                    ]
+                },
+                "text-max-width": 30
+            },
+            "metadata": {
+                "mapbox:group": "1444955913044.6504"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "in",
+                    "marketName",
+                    "Malagash Thrumcap",
+                    "Beavertail",
+                    "Moon Shoal",
+                    "Wild Goose",
+                    "Bluepoint",
+                    "Fanny Bay"
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://fogfish.44b827ih",
+            "id": "oyster-leftLabels Malagash perfect",
+            "paint": {
+                "text-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            "rgba(156,156,156,1)"
+                        ],
+                        [
+                            10,
+                            "#d1d1d1"
+                        ]
+                    ]
+                },
+                "text-translate": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            8,
+                            [
+                                -8,
+                                0
+                            ]
+                        ],
+                        [
+                            10,
+                            [
+                                -8,
+                                0
+                            ]
+                        ],
+                        [
+                            11,
+                            [
+                                0,
+                                0
+                            ]
+                        ]
+                    ]
+                },
+                "text-translate-anchor": "map"
+            },
+            "source-layer": "oyster-jsonInput"
+        },
+        {
+            "interactive": true,
+            "minzoom": 5,
+            "layout": {
+                "text-line-height": 1,
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            5,
+                            0
+                        ],
+                        [
+                            6,
+                            6
+                        ],
+                        [
+                            9,
+                            15
+                        ],
+                        [
+                            12,
+                            13.5
+                        ]
+                    ]
+                },
+                "text-transform": "none",
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-justify": "left",
+                "visibility": "visible",
+                "text-offset": [
+                    0.5,
+                    0
+                ],
+                "text-rotation-alignment": "viewport",
+                "text-anchor": "left",
+                "text-field": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            "{marketName}"
+                        ],
+                        [
+                            22,
+                            "{marketName}"
+                        ]
+                    ]
+                },
+                "text-max-width": 30
+            },
+            "metadata": {
+                "mapbox:group": "1444955913044.6504"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "==",
+                    "rank",
+                    1
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://fogfish.44b827ih",
+            "id": "oyster-labels: rank 1",
+            "paint": {
+                "text-color": "rgba(209,209,209,1)"
+            },
+            "source-layer": "oyster-jsonInput"
+        }
+    ],
+    "created": "2015-12-03T08:27:42.238Z",
+    "id": "cihpzc653001gbrlznbcdvux5",
+    "modified": "2015-12-03T08:27:42.238Z",
+    "owner": "maper",
+    "draft": false
+}

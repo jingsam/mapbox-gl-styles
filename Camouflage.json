@@ -1,0 +1,5372 @@
+{
+    "version": 8,
+    "name": "Camouflage",
+    "metadata": {
+        "mapbox:groups": {
+            "1444784400047.1423": {
+                "name": "admin",
+                "collapsed": false
+            },
+            "1444836261019.852": {
+                "name": "place label",
+                "collapsed": false
+            },
+            "1444866491213.1096": {
+                "name": "Buildings",
+                "collapsed": false
+            },
+            "1444866038988.4153": {
+                "name": "geographic lines",
+                "collapsed": false
+            },
+            "1444783827820.209": {
+                "name": "country label",
+                "collapsed": false
+            },
+            "1445386383953.8203": {
+                "name": "POI",
+                "collapsed": false
+            },
+            "1444762059816.3752": {
+                "name": "landuse",
+                "collapsed": false
+            },
+            "1444759187144.1123": {
+                "name": "landcover",
+                "collapsed": false
+            },
+            "1444758863785.3037": {
+                "name": "hillshade",
+                "collapsed": false
+            },
+            "1444764377291.5095": {
+                "name": "road",
+                "collapsed": false
+            },
+            "1444869402214.2546": {
+                "name": "Road labels",
+                "collapsed": false
+            },
+            "1444771660421.6897": {
+                "name": "bridge",
+                "collapsed": false
+            },
+            "1444869379063.1243": {
+                "name": "Marine labels",
+                "collapsed": true
+            },
+            "1444772751580.7573": {
+                "name": "tunnel",
+                "collapsed": false
+            }
+        }
+    },
+    "center": [
+        -442.4515323182357,
+        8.774841091492817
+    ],
+    "zoom": 9.689368809119214,
+    "bearing": 0,
+    "pitch": 0,
+    "sources": {
+        "mapbox://mapbox.mapbox-streets-v6": {
+            "url": "mapbox://mapbox.mapbox-streets-v6",
+            "type": "vector"
+        },
+        "mapbox://mapbox.mapbox-terrain-v2": {
+            "url": "mapbox://mapbox.mapbox-terrain-v2",
+            "type": "vector"
+        },
+        "mapbox://edenhalperin.csmhflj2": {
+            "url": "mapbox://edenhalperin.csmhflj2",
+            "type": "vector"
+        },
+        "mapbox://edenhalperin.4g1dp84o": {
+            "url": "mapbox://edenhalperin.4g1dp84o",
+            "type": "vector"
+        },
+        "mapbox://mapbox.satellite": {
+            "url": "mapbox://mapbox.satellite",
+            "type": "raster",
+            "tileSize": 256
+        },
+        "mapbox://edenhalperin.9n0zv2bi": {
+            "url": "mapbox://edenhalperin.9n0zv2bi",
+            "type": "vector"
+        }
+    },
+    "sprite": "mapbox://sprites/maper/cihq0gzfn001wb0kpzha7wkm9",
+    "glyphs": "mapbox://fonts/maper/{fontstack}/{range}.pbf",
+    "layers": [
+        {
+            "id": "background",
+            "type": "background",
+            "paint": {
+                "background-color": "rgba(25,28,26,1)"
+            },
+            "interactive": true
+        },
+        {
+            "minzoom": 10,
+            "type": "raster",
+            "paint": {
+                "raster-saturation": -1,
+                "raster-brightness-max": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            17,
+                            0.3
+                        ],
+                        [
+                            19,
+                            1
+                        ]
+                    ]
+                },
+                "raster-opacity": {
+                    "base": 1.75,
+                    "stops": [
+                        [
+                            10,
+                            0
+                        ],
+                        [
+                            15,
+                            1
+                        ]
+                    ]
+                },
+                "raster-contrast": 0.1,
+                "raster-fade-duration": 150
+            },
+            "layout": {
+                "visibility": "visible"
+            },
+            "id": "mapbox-mapbox-satellite",
+            "source": "mapbox://mapbox.satellite",
+            "interactive": true
+        },
+        {
+            "interactive": true,
+            "layout": {},
+            "metadata": {
+                "mapbox:group": "1444759187144.1123"
+            },
+            "filter": [
+                "==",
+                "class",
+                "grass"
+            ],
+            "type": "fill",
+            "source": "mapbox://mapbox.mapbox-terrain-v2",
+            "id": "landcover grass",
+            "paint": {
+                "fill-color": "rgba(255,255,255,0.025)",
+                "fill-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            17,
+                            1
+                        ],
+                        [
+                            19,
+                            0.2
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "landcover"
+        },
+        {
+            "interactive": true,
+            "layout": {},
+            "metadata": {
+                "mapbox:group": "1444759187144.1123"
+            },
+            "filter": [
+                "==",
+                "class",
+                "crop"
+            ],
+            "type": "fill",
+            "source": "mapbox://mapbox.mapbox-terrain-v2",
+            "id": "landcover crop",
+            "paint": {
+                "fill-color": "rgba(255,243,69,0.03)",
+                "fill-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            17,
+                            1
+                        ],
+                        [
+                            19,
+                            0.2
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "landcover"
+        },
+        {
+            "interactive": true,
+            "layout": {},
+            "metadata": {
+                "mapbox:group": "1444759187144.1123"
+            },
+            "filter": [
+                "==",
+                "class",
+                "scrub"
+            ],
+            "type": "fill",
+            "source": "mapbox://mapbox.mapbox-terrain-v2",
+            "id": "landcover scrub",
+            "paint": {
+                "fill-color": "rgba(216,255,110,0.028)",
+                "fill-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            17,
+                            1
+                        ],
+                        [
+                            19,
+                            0.2
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "landcover"
+        },
+        {
+            "interactive": true,
+            "layout": {},
+            "metadata": {
+                "mapbox:group": "1444759187144.1123"
+            },
+            "filter": [
+                "==",
+                "class",
+                "wood"
+            ],
+            "type": "fill",
+            "source": "mapbox://mapbox.mapbox-terrain-v2",
+            "id": "landcover wood",
+            "paint": {
+                "fill-color": "rgba(108,255,92,0.05)",
+                "fill-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            17,
+                            1
+                        ],
+                        [
+                            19,
+                            0.2
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "landcover"
+        },
+        {
+            "interactive": true,
+            "layout": {},
+            "metadata": {
+                "mapbox:group": "1444759187144.1123"
+            },
+            "filter": [
+                "==",
+                "class",
+                "snow"
+            ],
+            "type": "fill",
+            "source": "mapbox://mapbox.mapbox-terrain-v2",
+            "id": "landcover snow",
+            "paint": {
+                "fill-color": "rgba(53,158,232,0.04)",
+                "fill-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            17,
+                            1
+                        ],
+                        [
+                            19,
+                            0.2
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "landcover"
+        },
+        {
+            "interactive": true,
+            "layout": {},
+            "metadata": {
+                "mapbox:group": "1444762059816.3752"
+            },
+            "filter": [
+                "==",
+                "class",
+                "wood"
+            ],
+            "type": "fill",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "landuse wood",
+            "paint": {
+                "fill-color": "rgba(35,56,42,0.22)",
+                "fill-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            17,
+                            1
+                        ],
+                        [
+                            19,
+                            0.6
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "landuse"
+        },
+        {
+            "interactive": true,
+            "layout": {},
+            "metadata": {
+                "mapbox:group": "1444762059816.3752"
+            },
+            "filter": [
+                "in",
+                "class",
+                "sand",
+                "pitch"
+            ],
+            "type": "fill",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "landuse sand",
+            "paint": {
+                "fill-color": "rgba(32,92,85,0.25)",
+                "fill-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            17,
+                            1
+                        ],
+                        [
+                            19,
+                            0.6
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "landuse"
+        },
+        {
+            "interactive": true,
+            "layout": {},
+            "metadata": {
+                "mapbox:group": "1444762059816.3752"
+            },
+            "filter": [
+                "==",
+                "class",
+                "parking"
+            ],
+            "type": "fill",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "landuse parking",
+            "paint": {
+                "fill-color": "rgba(47,32,92,0.22)",
+                "fill-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            17,
+                            1
+                        ],
+                        [
+                            19,
+                            0.6
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "landuse"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1444762059816.3752"
+            },
+            "filter": [
+                "in",
+                "class",
+                "scrub",
+                "pitch"
+            ],
+            "type": "fill",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "landuse scrub",
+            "paint": {
+                "fill-color": "rgba(69,69,43,0.25)",
+                "fill-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            17,
+                            1
+                        ],
+                        [
+                            19,
+                            0.6
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "landuse"
+        },
+        {
+            "interactive": true,
+            "layout": {},
+            "metadata": {
+                "mapbox:group": "1444762059816.3752"
+            },
+            "filter": [
+                "==",
+                "class",
+                "park"
+            ],
+            "type": "fill",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "landuse park",
+            "paint": {
+                "fill-color": "rgba(46,66,40,0.3)",
+                "fill-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            17,
+                            1
+                        ],
+                        [
+                            19,
+                            0.6
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "landuse"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1444762059816.3752"
+            },
+            "filter": [
+                "in",
+                "class",
+                "hospital",
+                "cemetery"
+            ],
+            "type": "fill",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "landuse hospital",
+            "paint": {
+                "fill-color": "rgba(138,52,89,0.2)",
+                "fill-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            17,
+                            1
+                        ],
+                        [
+                            19,
+                            0.6
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "landuse"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1444762059816.3752"
+            },
+            "filter": [
+                "==",
+                "class",
+                "agriculture"
+            ],
+            "type": "fill",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "landuse agriculture",
+            "paint": {
+                "fill-color": "rgba(92,79,56,0.22)",
+                "fill-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            17,
+                            1
+                        ],
+                        [
+                            19,
+                            0.6
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "landuse"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1444762059816.3752"
+            },
+            "filter": [
+                "==",
+                "class",
+                "grass"
+            ],
+            "type": "fill",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "landuse grass",
+            "paint": {
+                "fill-color": "rgba(65,94,55,0.25)",
+                "fill-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            17,
+                            1
+                        ],
+                        [
+                            19,
+                            0.6
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "landuse"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1444762059816.3752"
+            },
+            "filter": [
+                "==",
+                "class",
+                "industrial"
+            ],
+            "type": "fill",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "landuse industrial",
+            "paint": {
+                "fill-color": "rgba(133,101,53,0.2)",
+                "fill-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            17,
+                            1
+                        ],
+                        [
+                            19,
+                            0.6
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "landuse"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1444762059816.3752"
+            },
+            "filter": [
+                "in",
+                "class",
+                "glacier",
+                "school"
+            ],
+            "type": "fill",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "landuse school and glacier",
+            "paint": {
+                "fill-color": "rgba(65,92,110,0.2)",
+                "fill-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            17,
+                            1
+                        ],
+                        [
+                            19,
+                            0.6
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "landuse"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-join": "round",
+                "line-cap": "round"
+            },
+            "metadata": {
+                "mapbox:group": "1444758863785.3037"
+            },
+            "filter": [
+                "!=",
+                "index",
+                10
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-terrain-v2",
+            "id": "contour",
+            "paint": {
+                "line-color": "rgba(164,207,124,0.12)",
+                "line-width": 0.85
+            },
+            "source-layer": "contour"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-join": "round",
+                "line-cap": "round"
+            },
+            "metadata": {
+                "mapbox:group": "1444758863785.3037"
+            },
+            "filter": [
+                "==",
+                "index",
+                10
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-terrain-v2",
+            "id": "contour main",
+            "paint": {
+                "line-color": "rgba(149,204,98,0.09)",
+                "line-width": {
+                    "base": 0.8,
+                    "stops": [
+                        [
+                            14,
+                            1.4
+                        ],
+                        [
+                            22,
+                            6
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "contour"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1444758863785.3037"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "class",
+                    "highlight"
+                ],
+                [
+                    "==",
+                    "level",
+                    94
+                ]
+            ],
+            "type": "fill",
+            "source": "mapbox://mapbox.mapbox-terrain-v2",
+            "id": "hillshade highlight 1",
+            "paint": {
+                "fill-color": "rgba(255,128,69,0.1)",
+                "fill-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            17,
+                            1
+                        ],
+                        [
+                            19,
+                            0.2
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "hillshade"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1444758863785.3037"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "class",
+                    "highlight"
+                ],
+                [
+                    "==",
+                    "level",
+                    90
+                ]
+            ],
+            "type": "fill",
+            "source": "mapbox://mapbox.mapbox-terrain-v2",
+            "id": "hillshade highlight 2",
+            "paint": {
+                "fill-color": "rgba(255,128,69,0.1)",
+                "fill-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            17,
+                            1
+                        ],
+                        [
+                            19,
+                            0.2
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "hillshade"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1444758863785.3037"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "class",
+                    "shadow"
+                ],
+                [
+                    "==",
+                    "level",
+                    89
+                ]
+            ],
+            "type": "fill",
+            "source": "mapbox://mapbox.mapbox-terrain-v2",
+            "id": "hillshade shadow 1",
+            "paint": {
+                "fill-color": "rgba(26,10,38,0.2)",
+                "fill-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            17,
+                            1
+                        ],
+                        [
+                            19,
+                            0.2
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "hillshade"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1444758863785.3037"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "class",
+                    "shadow"
+                ],
+                [
+                    "==",
+                    "level",
+                    78
+                ]
+            ],
+            "type": "fill",
+            "source": "mapbox://mapbox.mapbox-terrain-v2",
+            "id": "hillshade shadow 2",
+            "paint": {
+                "fill-color": "rgba(26,10,38,0.2)",
+                "fill-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            17,
+                            1
+                        ],
+                        [
+                            19,
+                            0.2
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "hillshade"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1444758863785.3037"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "class",
+                    "shadow"
+                ],
+                [
+                    "==",
+                    "level",
+                    67
+                ]
+            ],
+            "type": "fill",
+            "source": "mapbox://mapbox.mapbox-terrain-v2",
+            "id": "hillshade shadow 3",
+            "paint": {
+                "fill-color": "rgba(26,10,38,0.2)",
+                "fill-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            17,
+                            1
+                        ],
+                        [
+                            19,
+                            0.2
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "hillshade"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1444758863785.3037"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "class",
+                    "shadow"
+                ],
+                [
+                    "==",
+                    "level",
+                    56
+                ]
+            ],
+            "type": "fill",
+            "source": "mapbox://mapbox.mapbox-terrain-v2",
+            "id": "hillshade shadow 4",
+            "paint": {
+                "fill-color": "rgba(26,10,38,0.2)",
+                "fill-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            17,
+                            1
+                        ],
+                        [
+                            19,
+                            0.2
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "hillshade"
+        },
+        {
+            "layout": {
+                "visibility": "visible"
+            },
+            "type": "fill",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "landuse-overlay",
+            "paint": {
+                "fill-color": "white",
+                "fill-pattern": "stripe"
+            },
+            "source-layer": "landuse_overlay",
+            "interactive": true
+        },
+        {
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1444866038988.4153"
+            },
+            "type": "line",
+            "source": "mapbox://edenhalperin.csmhflj2",
+            "id": "geographic lines",
+            "paint": {
+                "line-color": "rgba(181,90,60,0.27)",
+                "line-width": 1
+            },
+            "source-layer": "ne_10m_geographic_lines",
+            "interactive": true
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "text-size": 8,
+                "icon-rotation-alignment": "map",
+                "text-transform": "uppercase",
+                "symbol-spacing": 350,
+                "text-font": [
+                    "Hack Regular",
+                    "Arial Unicode MS Regular"
+                ],
+                "symbol-placement": "line",
+                "text-offset": [
+                    0,
+                    -0.4
+                ],
+                "text-rotation-alignment": "map",
+                "text-anchor": "bottom",
+                "text-field": "{name_long}",
+                "text-letter-spacing": 0.5
+            },
+            "metadata": {
+                "mapbox:group": "1444866038988.4153"
+            },
+            "filter": [
+                "in",
+                "$type",
+                "Polygon",
+                "Point",
+                "LineString"
+            ],
+            "type": "symbol",
+            "source": "mapbox://edenhalperin.csmhflj2",
+            "id": "Geographic lines label",
+            "paint": {
+                "text-color": "rgba(140,63,63,1)"
+            },
+            "source-layer": "ne_10m_geographic_lines"
+        },
+        {
+            "interactive": true,
+            "minzoom": 8,
+            "layout": {
+                "visibility": "visible"
+            },
+            "type": "line",
+            "source": "mapbox://edenhalperin.9n0zv2bi",
+            "id": "Graticules 1",
+            "paint": {
+                "line-color": "rgba(93,245,209,1)",
+                "line-dasharray": [
+                    0.1,
+                    1
+                ],
+                "line-opacity": 0.16,
+                "line-width": 6
+            },
+            "source-layer": "ne_10m_graticules_1"
+        },
+        {
+            "layout": {
+                "visibility": "visible"
+            },
+            "type": "line",
+            "source": "mapbox://edenhalperin.4g1dp84o",
+            "id": "Graticules 20",
+            "paint": {
+                "line-color": "rgba(128,83,42,0.52)",
+                "line-dasharray": [
+                    8,
+                    5
+                ]
+            },
+            "source-layer": "ne_10m_graticules_20",
+            "interactive": true
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "text-size": 40,
+                "text-allow-overlap": false,
+                "text-ignore-placement": false,
+                "text-font": [
+                    "Hack Regular",
+                    "Arial Unicode MS Regular"
+                ],
+                "symbol-placement": "line",
+                "text-padding": 100,
+                "visibility": "visible",
+                "text-rotation-alignment": "map",
+                "text-field": "{degrees}°{direction}"
+            },
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "$type",
+                    "LineString",
+                    "Point"
+                ],
+                [
+                    "in",
+                    "direction",
+                    "N",
+                    "S"
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://edenhalperin.9n0zv2bi",
+            "id": "Graticules 1 label",
+            "paint": {
+                "text-color": "rgba(93,245,139,1)",
+                "text-opacity": 0.1
+            },
+            "source-layer": "ne_10m_graticules_1"
+        },
+        {
+            "layout": {
+                "text-size": 9,
+                "icon-image": "circle-12",
+                "symbol-spacing": 450,
+                "text-font": [
+                    "Hack Bold",
+                    "Arial Unicode MS Regular"
+                ],
+                "symbol-placement": "line",
+                "text-offset": [
+                    0,
+                    -0.2
+                ],
+                "text-rotation-alignment": "map",
+                "text-anchor": "bottom",
+                "text-field": "{degrees}°{direction}",
+                "text-letter-spacing": 0.3
+            },
+            "type": "symbol",
+            "source": "mapbox://edenhalperin.4g1dp84o",
+            "id": "Graticules 20 label",
+            "paint": {
+                "text-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            "rgba(166,108,55,0.5)"
+                        ],
+                        [
+                            5,
+                            "rgba(166,108,55,0.96)"
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "ne_10m_graticules_20",
+            "interactive": true
+        },
+        {
+            "layout": {
+                "visibility": "visible"
+            },
+            "type": "fill",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "water",
+            "paint": {
+                "fill-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            14,
+                            "rgba(0,0,0,0.4)"
+                        ],
+                        [
+                            15,
+                            "rgba(0,0,0,0.05)"
+                        ]
+                    ]
+                },
+                "fill-outline-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            2,
+                            "#555"
+                        ],
+                        [
+                            4,
+                            "#333"
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "water",
+            "interactive": true
+        },
+        {
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "square",
+                "line-join": "round"
+            },
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "waterway",
+            "paint": {
+                "line-color": "#333",
+                "line-width": {
+                    "base": 1.6,
+                    "stops": [
+                        [
+                            12,
+                            1
+                        ],
+                        [
+                            18,
+                            4
+                        ],
+                        [
+                            19,
+                            1
+                        ]
+                    ]
+                },
+                "line-dasharray": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            [
+                                6,
+                                2
+                            ]
+                        ],
+                        [
+                            16,
+                            [
+                                2,
+                                6
+                            ]
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "waterway",
+            "interactive": true
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "nextDropPoint": false,
+            "metadata": {
+                "mapbox:group": "1444784400047.1423"
+            },
+            "filter": [
+                "==",
+                "maritime",
+                1
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "admin maritime",
+            "paint": {
+                "line-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            2,
+                            "#333"
+                        ],
+                        [
+                            5,
+                            "#222"
+                        ]
+                    ]
+                },
+                "line-width": 1
+            },
+            "source-layer": "admin"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "nextDropPoint": false,
+            "metadata": {
+                "mapbox:group": "1444784400047.1423"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "maritime",
+                    0
+                ],
+                [
+                    "==",
+                    "admin_level",
+                    2
+                ],
+                [
+                    "==",
+                    "disputed",
+                    0
+                ]
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "admin case 1",
+            "paint": {
+                "line-color": "rgba(88,99,76,1)",
+                "line-width": {
+                    "base": 1.3,
+                    "stops": [
+                        [
+                            4,
+                            1
+                        ],
+                        [
+                            8,
+                            6
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "admin"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "nextDropPoint": false,
+            "metadata": {
+                "mapbox:group": "1444784400047.1423"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "maritime",
+                    0
+                ],
+                [
+                    "==",
+                    "admin_level",
+                    2
+                ],
+                [
+                    "==",
+                    "disputed",
+                    1
+                ]
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "admin case 1 disputed",
+            "paint": {
+                "line-color": "rgba(107,49,49,1)",
+                "line-width": {
+                    "base": 1.3,
+                    "stops": [
+                        [
+                            4,
+                            1
+                        ],
+                        [
+                            8,
+                            6
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "admin"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "nextDropPoint": false,
+            "metadata": {
+                "mapbox:group": "1444784400047.1423"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "maritime",
+                    0
+                ],
+                [
+                    "==",
+                    "admin_level",
+                    2
+                ]
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "admin 1",
+            "paint": {
+                "line-color": "#111",
+                "line-width": 2,
+                "line-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            6.5,
+                            0
+                        ],
+                        [
+                            7.5,
+                            1
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "admin"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "nextDropPoint": false,
+            "metadata": {
+                "mapbox:group": "1444784400047.1423"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "maritime",
+                    0
+                ],
+                [
+                    "in",
+                    "admin_level",
+                    4,
+                    3
+                ],
+                [
+                    "==",
+                    "disputed",
+                    0
+                ]
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "admin 2",
+            "paint": {
+                "line-color": "rgba(75,94,93,1)",
+                "line-width": {
+                    "base": 1.2,
+                    "stops": [
+                        [
+                            4,
+                            0.5
+                        ],
+                        [
+                            12,
+                            4
+                        ]
+                    ]
+                },
+                "line-opacity": 1
+            },
+            "source-layer": "admin"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "nextDropPoint": false,
+            "metadata": {
+                "mapbox:group": "1444784400047.1423"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "maritime",
+                    0
+                ],
+                [
+                    "in",
+                    "admin_level",
+                    4,
+                    3
+                ],
+                [
+                    "==",
+                    "disputed",
+                    1
+                ]
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "admin 2 disputed",
+            "paint": {
+                "line-color": "rgba(107,49,49,1)",
+                "line-width": {
+                    "base": 1.2,
+                    "stops": [
+                        [
+                            4,
+                            0.5
+                        ],
+                        [
+                            12,
+                            6
+                        ]
+                    ]
+                },
+                "line-opacity": 1
+            },
+            "source-layer": "admin"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "metadata": {
+                "mapbox:group": "1444772751580.7573"
+            },
+            "filter": [
+                "in",
+                "class",
+                "path",
+                "golf",
+                "driveway",
+                "aerialway"
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "tunnel path",
+            "paint": {
+                "line-color": "#333",
+                "line-width": {
+                    "base": 1.6,
+                    "stops": [
+                        [
+                            15,
+                            0.8
+                        ],
+                        [
+                            18,
+                            3.5
+                        ],
+                        [
+                            19,
+                            1
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "tunnel"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "metadata": {
+                "mapbox:group": "1444772751580.7573"
+            },
+            "filter": [
+                "==",
+                "class",
+                "motorway_link"
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "tunnel motorway-link",
+            "paint": {
+                "line-color": "rgba(66,64,55,1)",
+                "line-width": {
+                    "base": 1.5,
+                    "stops": [
+                        [
+                            12,
+                            1.4
+                        ],
+                        [
+                            18,
+                            14
+                        ],
+                        [
+                            19,
+                            1
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "tunnel"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "metadata": {
+                "mapbox:group": "1444772751580.7573"
+            },
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "class",
+                    "street",
+                    "street_limited"
+                ],
+                [
+                    "==",
+                    "type",
+                    "construction"
+                ]
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "tunnel street construction",
+            "paint": {
+                "line-color": "#333",
+                "line-width": {
+                    "base": 1.6,
+                    "stops": [
+                        [
+                            12,
+                            0.5
+                        ],
+                        [
+                            18,
+                            8
+                        ],
+                        [
+                            19,
+                            1
+                        ]
+                    ]
+                },
+                "line-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            11,
+                            0
+                        ],
+                        [
+                            11.5,
+                            1
+                        ]
+                    ]
+                },
+                "line-dasharray": [
+                    0.3,
+                    0.4
+                ]
+            },
+            "source-layer": "tunnel"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "metadata": {
+                "mapbox:group": "1444772751580.7573"
+            },
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "class",
+                    "street",
+                    "street_limited"
+                ],
+                [
+                    "!=",
+                    "type",
+                    "construction"
+                ]
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "tunnel street",
+            "paint": {
+                "line-color": "#333",
+                "line-width": {
+                    "base": 1.6,
+                    "stops": [
+                        [
+                            12,
+                            0.5
+                        ],
+                        [
+                            18,
+                            8
+                        ],
+                        [
+                            19,
+                            1
+                        ]
+                    ]
+                },
+                "line-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            11,
+                            0
+                        ],
+                        [
+                            11.5,
+                            1
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "tunnel"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "metadata": {
+                "mapbox:group": "1444772751580.7573"
+            },
+            "filter": [
+                "==",
+                "class",
+                "main"
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "tunnel main",
+            "paint": {
+                "line-color": "#333",
+                "line-width": {
+                    "base": 1.6,
+                    "stops": [
+                        [
+                            7,
+                            0.4
+                        ],
+                        [
+                            18,
+                            12
+                        ],
+                        [
+                            19,
+                            1
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "tunnel"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "metadata": {
+                "mapbox:group": "1444772751580.7573"
+            },
+            "filter": [
+                "==",
+                "class",
+                "motorway"
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "tunnel motorway",
+            "paint": {
+                "line-color": "rgba(71,64,51,1)",
+                "line-width": {
+                    "base": 1.6,
+                    "stops": [
+                        [
+                            5,
+                            1.2
+                        ],
+                        [
+                            18,
+                            20
+                        ],
+                        [
+                            19,
+                            1
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "tunnel"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "metadata": {
+                "mapbox:group": "1444772751580.7573"
+            },
+            "filter": [
+                "==",
+                "class",
+                "minor_rail"
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "tunnel rail minor",
+            "paint": {
+                "line-color": "rgba(61,51,56,1)",
+                "line-width": {
+                    "base": 1.6,
+                    "stops": [
+                        [
+                            15,
+                            1.2
+                        ],
+                        [
+                            18,
+                            2.75
+                        ],
+                        [
+                            19,
+                            1
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "tunnel"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "metadata": {
+                "mapbox:group": "1444772751580.7573"
+            },
+            "filter": [
+                "==",
+                "class",
+                "major_rail"
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "tunnel rail major",
+            "paint": {
+                "line-color": "rgba(61,51,56,1)",
+                "line-width": {
+                    "base": 1.6,
+                    "stops": [
+                        [
+                            14,
+                            1.25
+                        ],
+                        [
+                            18,
+                            3.75
+                        ],
+                        [
+                            19,
+                            1
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "tunnel"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "metadata": {
+                "mapbox:group": "1444764377291.5095"
+            },
+            "filter": [
+                "==",
+                "class",
+                "path"
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "road path",
+            "paint": {
+                "line-color": "#444",
+                "line-width": {
+                    "base": 1.6,
+                    "stops": [
+                        [
+                            15,
+                            0.5
+                        ],
+                        [
+                            18,
+                            3
+                        ],
+                        [
+                            19,
+                            1
+                        ]
+                    ]
+                },
+                "line-dasharray": [
+                    4,
+                    3
+                ]
+            },
+            "source-layer": "road"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "metadata": {
+                "mapbox:group": "1444764377291.5095"
+            },
+            "filter": [
+                "in",
+                "class",
+                "driveway",
+                "service"
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "road service driveway",
+            "paint": {
+                "line-color": "#444",
+                "line-width": {
+                    "base": 1.6,
+                    "stops": [
+                        [
+                            14,
+                            0.5
+                        ],
+                        [
+                            18,
+                            6
+                        ],
+                        [
+                            19,
+                            1
+                        ]
+                    ]
+                },
+                "line-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            11,
+                            0
+                        ],
+                        [
+                            11.5,
+                            1
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "road"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "metadata": {
+                "mapbox:group": "1444764377291.5095"
+            },
+            "filter": [
+                "==",
+                "class",
+                "motorway_link"
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "road motorway link",
+            "paint": {
+                "line-color": "rgba(74,71,64,1)",
+                "line-width": {
+                    "base": 1.5,
+                    "stops": [
+                        [
+                            12,
+                            1.4
+                        ],
+                        [
+                            18,
+                            14
+                        ],
+                        [
+                            19,
+                            1
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "road"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "metadata": {
+                "mapbox:group": "1444764377291.5095"
+            },
+            "filter": [
+                "==",
+                "class",
+                "street"
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "road street",
+            "paint": {
+                "line-color": "#444",
+                "line-width": {
+                    "base": 1.6,
+                    "stops": [
+                        [
+                            12,
+                            0.5
+                        ],
+                        [
+                            18,
+                            8
+                        ],
+                        [
+                            19,
+                            1
+                        ]
+                    ]
+                },
+                "line-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            11,
+                            0
+                        ],
+                        [
+                            11.5,
+                            1
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "road"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "butt",
+                "line-join": "bevel"
+            },
+            "metadata": {
+                "mapbox:group": "1444764377291.5095"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "class",
+                    "street_limited"
+                ],
+                [
+                    "==",
+                    "type",
+                    "construction"
+                ]
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "road street construction",
+            "paint": {
+                "line-color": "#444",
+                "line-width": {
+                    "base": 1.6,
+                    "stops": [
+                        [
+                            12,
+                            0.5
+                        ],
+                        [
+                            18,
+                            3
+                        ],
+                        [
+                            22,
+                            1
+                        ]
+                    ]
+                },
+                "line-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            11,
+                            0
+                        ],
+                        [
+                            11.5,
+                            1
+                        ]
+                    ]
+                },
+                "line-dasharray": [
+                    0.3,
+                    0.4
+                ]
+            },
+            "source-layer": "road"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "metadata": {
+                "mapbox:group": "1444764377291.5095"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "class",
+                    "street_limited"
+                ],
+                [
+                    "!=",
+                    "type",
+                    "construction"
+                ]
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "road street limited",
+            "paint": {
+                "line-color": "#444",
+                "line-width": {
+                    "base": 1.6,
+                    "stops": [
+                        [
+                            12,
+                            0.5
+                        ],
+                        [
+                            18,
+                            3
+                        ],
+                        [
+                            22,
+                            1
+                        ]
+                    ]
+                },
+                "line-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            11,
+                            0
+                        ],
+                        [
+                            11.5,
+                            1
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "road"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "metadata": {
+                "mapbox:group": "1444764377291.5095"
+            },
+            "filter": [
+                "==",
+                "class",
+                "main"
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "road main",
+            "paint": {
+                "line-color": "#444",
+                "line-width": {
+                    "base": 1.6,
+                    "stops": [
+                        [
+                            7,
+                            0.4
+                        ],
+                        [
+                            18,
+                            12
+                        ],
+                        [
+                            19,
+                            1
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "road"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "metadata": {
+                "mapbox:group": "1444764377291.5095"
+            },
+            "filter": [
+                "==",
+                "class",
+                "motorway"
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "road motorway",
+            "paint": {
+                "line-color": "rgba(89,81,67,1)",
+                "line-width": {
+                    "base": 1.6,
+                    "stops": [
+                        [
+                            5,
+                            1.2
+                        ],
+                        [
+                            18,
+                            20
+                        ],
+                        [
+                            19,
+                            1
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "road"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "metadata": {
+                "mapbox:group": "1444764377291.5095"
+            },
+            "filter": [
+                "==",
+                "class",
+                "minor_rail"
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "road rail minor",
+            "paint": {
+                "line-color": "rgba(82,67,74,1)",
+                "line-width": {
+                    "base": 1.6,
+                    "stops": [
+                        [
+                            15,
+                            1.2
+                        ],
+                        [
+                            18,
+                            2.75
+                        ],
+                        [
+                            19,
+                            1
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "road"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "metadata": {
+                "mapbox:group": "1444764377291.5095"
+            },
+            "filter": [
+                "==",
+                "class",
+                "major_rail"
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "road rail major",
+            "paint": {
+                "line-color": "rgba(82,67,74,1)",
+                "line-width": {
+                    "base": 1.6,
+                    "stops": [
+                        [
+                            14,
+                            1.25
+                        ],
+                        [
+                            18,
+                            3.75
+                        ],
+                        [
+                            19,
+                            1
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "road"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "metadata": {
+                "mapbox:group": "1444771660421.6897"
+            },
+            "filter": [
+                "in",
+                "class",
+                "path",
+                "golf",
+                "driveway",
+                "aerialway"
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "bridge path",
+            "paint": {
+                "line-color": "rgba(79,79,79,1)",
+                "line-width": {
+                    "base": 1.6,
+                    "stops": [
+                        [
+                            15,
+                            0.8
+                        ],
+                        [
+                            18,
+                            3.5
+                        ],
+                        [
+                            19,
+                            1
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "bridge"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "metadata": {
+                "mapbox:group": "1444771660421.6897"
+            },
+            "filter": [
+                "==",
+                "class",
+                "motorway_link"
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "bridge motorway-link",
+            "paint": {
+                "line-color": "rgba(79,76,72,1)",
+                "line-width": {
+                    "base": 1.5,
+                    "stops": [
+                        [
+                            12,
+                            1.4
+                        ],
+                        [
+                            18,
+                            14
+                        ],
+                        [
+                            19,
+                            1
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "bridge"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "butt",
+                "line-join": "bevel"
+            },
+            "metadata": {
+                "mapbox:group": "1444771660421.6897"
+            },
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "class",
+                    "street",
+                    "street_limited"
+                ],
+                [
+                    "==",
+                    "type",
+                    "construction"
+                ]
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "bridge street construction",
+            "paint": {
+                "line-color": "rgba(79,79,79,1)",
+                "line-width": {
+                    "base": 1.6,
+                    "stops": [
+                        [
+                            12,
+                            0.5
+                        ],
+                        [
+                            18,
+                            8
+                        ],
+                        [
+                            19,
+                            1
+                        ]
+                    ]
+                },
+                "line-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            11,
+                            0
+                        ],
+                        [
+                            11.5,
+                            1
+                        ]
+                    ]
+                },
+                "line-dasharray": [
+                    0.3,
+                    0.4
+                ]
+            },
+            "source-layer": "bridge"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "metadata": {
+                "mapbox:group": "1444771660421.6897"
+            },
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "class",
+                    "street",
+                    "street_limited"
+                ],
+                [
+                    "!=",
+                    "type",
+                    "construction"
+                ]
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "bridge street",
+            "paint": {
+                "line-color": "rgba(79,79,79,1)",
+                "line-width": {
+                    "base": 1.6,
+                    "stops": [
+                        [
+                            12,
+                            0.5
+                        ],
+                        [
+                            18,
+                            8
+                        ],
+                        [
+                            19,
+                            1
+                        ]
+                    ]
+                },
+                "line-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            11,
+                            0
+                        ],
+                        [
+                            11.5,
+                            1
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "bridge"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "metadata": {
+                "mapbox:group": "1444771660421.6897"
+            },
+            "filter": [
+                "==",
+                "class",
+                "main"
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "bridge main",
+            "paint": {
+                "line-color": "#444",
+                "line-width": {
+                    "base": 1.6,
+                    "stops": [
+                        [
+                            7,
+                            0.4
+                        ],
+                        [
+                            18,
+                            12
+                        ],
+                        [
+                            19,
+                            1
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "bridge"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "metadata": {
+                "mapbox:group": "1444771660421.6897"
+            },
+            "filter": [
+                "==",
+                "class",
+                "motorway"
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "bridge motorway",
+            "paint": {
+                "line-color": "rgba(94,87,67,1)",
+                "line-width": {
+                    "base": 1.6,
+                    "stops": [
+                        [
+                            5,
+                            1.2
+                        ],
+                        [
+                            18,
+                            20
+                        ],
+                        [
+                            19,
+                            1
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "bridge"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "metadata": {
+                "mapbox:group": "1444771660421.6897"
+            },
+            "filter": [
+                "==",
+                "class",
+                "minor_rail"
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "bridge rail minor",
+            "paint": {
+                "line-color": "rgba(84,70,77,1)",
+                "line-width": {
+                    "base": 1.6,
+                    "stops": [
+                        [
+                            15,
+                            1.2
+                        ],
+                        [
+                            18,
+                            2.75
+                        ],
+                        [
+                            19,
+                            1
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "bridge"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "metadata": {
+                "mapbox:group": "1444771660421.6897"
+            },
+            "filter": [
+                "==",
+                "class",
+                "major_rail"
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "bridge rail major",
+            "paint": {
+                "line-color": "rgba(84,70,77,1)",
+                "line-width": {
+                    "base": 1.6,
+                    "stops": [
+                        [
+                            14,
+                            1.25
+                        ],
+                        [
+                            18,
+                            3.75
+                        ],
+                        [
+                            19,
+                            1
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "bridge"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "==",
+                    "type",
+                    "runway"
+                ]
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "aeroway runway",
+            "paint": {
+                "line-color": "rgba(89,76,56,1)",
+                "line-width": {
+                    "base": 1.6,
+                    "stops": [
+                        [
+                            5,
+                            1.2
+                        ],
+                        [
+                            18,
+                            36
+                        ],
+                        [
+                            19,
+                            1
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "aeroway"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "==",
+                    "type",
+                    "taxiway"
+                ]
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "aeroway taxiway",
+            "paint": {
+                "line-color": "rgba(79,72,66,1)",
+                "line-width": {
+                    "base": 1.6,
+                    "stops": [
+                        [
+                            8,
+                            0.6
+                        ],
+                        [
+                            18,
+                            6.5
+                        ],
+                        [
+                            19,
+                            1
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "aeroway"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Polygon"
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "aeroway building",
+            "paint": {
+                "line-color": "#444",
+                "line-width": 0.85
+            },
+            "source-layer": "aeroway"
+        },
+        {
+            "interactive": true,
+            "layout": {},
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Polygon"
+                ],
+                [
+                    "==",
+                    "class",
+                    "land"
+                ]
+            ],
+            "type": "fill",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "barrier-line fill",
+            "paint": {
+                "fill-color": "rgba(43,48,46,0.4)"
+            },
+            "source-layer": "barrier_line"
+        },
+        {
+            "interactive": true,
+            "layout": {},
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "barrier-line line",
+            "paint": {
+                "line-color": "rgba(75,94,93,1)",
+                "line-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            14,
+                            0.5
+                        ],
+                        [
+                            16,
+                            1
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "barrier_line"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1444866491213.1096"
+            },
+            "maxzoom": 18.25,
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "building",
+            "paint": {
+                "line-color": "#353535",
+                "line-width": 0.85
+            },
+            "source-layer": "building"
+        },
+        {
+            "layout": {
+                "visibility": "visible"
+            },
+            "type": "circle",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "housenum-label dot",
+            "paint": {
+                "circle-radius": 2,
+                "circle-color": "#333"
+            },
+            "source-layer": "housenum_label",
+            "interactive": true
+        },
+        {
+            "layout": {
+                "icon-image": "circle-12",
+                "text-field": "{house_num}",
+                "text-font": [
+                    "Hack Regular",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-anchor": "bottom",
+                "text-size": 8,
+                "text-allow-overlap": false,
+                "text-ignore-placement": false,
+                "text-offset": [
+                    0,
+                    -0.5
+                ]
+            },
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "housenum-label",
+            "paint": {
+                "text-color": "#666"
+            },
+            "source-layer": "housenum_label",
+            "interactive": true
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            6,
+                            8
+                        ],
+                        [
+                            14,
+                            9
+                        ]
+                    ]
+                },
+                "icon-image": "circle-12",
+                "text-max-angle": 30,
+                "text-font": [
+                    "Hack Regular",
+                    "Arial Unicode MS Regular"
+                ],
+                "symbol-placement": "line",
+                "text-offset": [
+                    0,
+                    -0.1
+                ],
+                "text-rotation-alignment": "map",
+                "text-anchor": "bottom",
+                "text-field": "{ele}m",
+                "text-letter-spacing": 0.1
+            },
+            "filter": [
+                "==",
+                "index",
+                10
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-terrain-v2",
+            "id": "contour labels",
+            "paint": {
+                "text-color": "rgba(81,89,41,1)"
+            },
+            "source-layer": "contour"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1445386383953.8203"
+            },
+            "filter": [
+                "all",
+                [
+                    "!=",
+                    "type",
+                    "Peak"
+                ],
+                [
+                    "!in",
+                    "maki",
+                    "hospital",
+                    "cemetery",
+                    "school",
+                    "park",
+                    "golf",
+                    "campsite",
+                    "dog-park",
+                    "airport",
+                    "airfield",
+                    "bus",
+                    "rail-light",
+                    "rail-metro",
+                    "ferry",
+                    "college"
+                ]
+            ],
+            "type": "circle",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "poi-label other dot",
+            "paint": {
+                "circle-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            18,
+                            "rgba(113,83,145,1)"
+                        ],
+                        [
+                            19,
+                            "rgba(208,185,237,1)"
+                        ]
+                    ]
+                },
+                "circle-radius": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            12,
+                            2
+                        ],
+                        [
+                            16,
+                            3
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "poi_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "icon-image": "circle-12",
+                "text-field": "{name}",
+                "text-font": [
+                    "Hack Regular",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-size": {
+                    "base": 1.1,
+                    "stops": [
+                        [
+                            12,
+                            8
+                        ],
+                        [
+                            16,
+                            9
+                        ]
+                    ]
+                },
+                "text-anchor": "top"
+            },
+            "metadata": {
+                "mapbox:group": "1445386383953.8203"
+            },
+            "filter": [
+                "all",
+                [
+                    "!=",
+                    "type",
+                    "Peak"
+                ],
+                [
+                    "!in",
+                    "maki",
+                    "hospital",
+                    "cemetery",
+                    "school",
+                    "park",
+                    "golf",
+                    "campsite",
+                    "dog-park",
+                    "airport",
+                    "airfield",
+                    "college",
+                    "bus",
+                    "rail-light",
+                    "rail-metro",
+                    "ferry"
+                ],
+                [
+                    "!in",
+                    "scalerank",
+                    1,
+                    2
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "poi-label other 2",
+            "paint": {
+                "text-translate": [
+                    0,
+                    6
+                ],
+                "text-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            18,
+                            "rgba(126,98,158,1)"
+                        ],
+                        [
+                            19,
+                            "rgba(208,185,237,1)"
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "poi_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "icon-image": "circle-12",
+                "text-field": "{name}",
+                "text-font": [
+                    "Hack Regular",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-size": {
+                    "base": 1.1,
+                    "stops": [
+                        [
+                            12,
+                            8
+                        ],
+                        [
+                            16,
+                            12
+                        ]
+                    ]
+                },
+                "text-anchor": "top"
+            },
+            "metadata": {
+                "mapbox:group": "1445386383953.8203"
+            },
+            "filter": [
+                "all",
+                [
+                    "!=",
+                    "type",
+                    "Peak"
+                ],
+                [
+                    "!in",
+                    "maki",
+                    "hospital",
+                    "cemetery",
+                    "school",
+                    "park",
+                    "golf",
+                    "campsite",
+                    "dog-park",
+                    "airport",
+                    "airfield",
+                    "college",
+                    "bus",
+                    "rail-light",
+                    "rail-metro",
+                    "ferry"
+                ],
+                [
+                    "in",
+                    "scalerank",
+                    1,
+                    2
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "poi-label other 1",
+            "paint": {
+                "text-translate": [
+                    0,
+                    6
+                ],
+                "text-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            18,
+                            "rgba(126,98,158,1)"
+                        ],
+                        [
+                            19,
+                            "rgba(208,185,237,1)"
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "poi_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "text-optional": true,
+                "text-size": {
+                    "base": 1.1,
+                    "stops": [
+                        [
+                            12,
+                            8
+                        ],
+                        [
+                            16,
+                            12
+                        ]
+                    ]
+                },
+                "icon-image": "hill",
+                "text-font": [
+                    "Hack Regular",
+                    "Arial Unicode MS Regular"
+                ],
+                "icon-allow-overlap": true,
+                "text-justify": "center",
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "icon-ignore-placement": true
+            },
+            "metadata": {
+                "mapbox:group": "1445386383953.8203"
+            },
+            "filter": [
+                "==",
+                "type",
+                "Peak"
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "poi-label peak",
+            "paint": {
+                "text-translate": [
+                    0,
+                    10
+                ],
+                "text-color": "rgba(235,61,119,1)"
+            },
+            "source-layer": "poi_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "text-optional": true,
+                "text-size": {
+                    "base": 1.1,
+                    "stops": [
+                        [
+                            12,
+                            8
+                        ],
+                        [
+                            16,
+                            9
+                        ]
+                    ]
+                },
+                "icon-image": "x",
+                "text-font": [
+                    "Hack Regular",
+                    "Arial Unicode MS Regular"
+                ],
+                "icon-allow-overlap": true,
+                "text-justify": "left",
+                "text-anchor": "left",
+                "text-field": "{name}",
+                "icon-ignore-placement": true
+            },
+            "metadata": {
+                "mapbox:group": "1445386383953.8203"
+            },
+            "filter": [
+                "in",
+                "maki",
+                "bus",
+                "rail-metro",
+                "rail-light",
+                "ferry"
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "poi-label transit",
+            "paint": {
+                "text-color": "rgba(133,128,62,1)",
+                "text-translate": [
+                    10,
+                    0
+                ],
+                "icon-opacity": 0.8
+            },
+            "source-layer": "poi_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "text-optional": true,
+                "text-size": {
+                    "base": 1.1,
+                    "stops": [
+                        [
+                            12,
+                            8
+                        ],
+                        [
+                            16,
+                            9
+                        ]
+                    ]
+                },
+                "icon-image": "plus",
+                "text-font": [
+                    "Hack Regular",
+                    "Arial Unicode MS Regular"
+                ],
+                "icon-allow-overlap": true,
+                "text-justify": "center",
+                "icon-size": 1,
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "icon-ignore-placement": true
+            },
+            "metadata": {
+                "mapbox:group": "1445386383953.8203"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "maki",
+                    "hospital"
+                ],
+                [
+                    "in",
+                    "scalerank",
+                    3,
+                    4
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "poi-label hospital 2",
+            "paint": {
+                "text-translate": [
+                    0,
+                    10
+                ],
+                "text-color": "rgba(140,94,126,1)"
+            },
+            "source-layer": "poi_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "text-optional": true,
+                "text-size": {
+                    "base": 1.1,
+                    "stops": [
+                        [
+                            12,
+                            8
+                        ],
+                        [
+                            16,
+                            12
+                        ]
+                    ]
+                },
+                "icon-image": "plus",
+                "text-font": [
+                    "Hack Regular",
+                    "Arial Unicode MS Regular"
+                ],
+                "icon-allow-overlap": true,
+                "text-justify": "center",
+                "icon-size": 1,
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "icon-ignore-placement": true
+            },
+            "metadata": {
+                "mapbox:group": "1445386383953.8203"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "maki",
+                    "hospital"
+                ],
+                [
+                    "in",
+                    "scalerank",
+                    1,
+                    2
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "poi-label hospital 1",
+            "paint": {
+                "text-translate": [
+                    0,
+                    10
+                ],
+                "text-color": "rgba(140,94,126,1)"
+            },
+            "source-layer": "poi_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "text-optional": true,
+                "text-size": {
+                    "base": 1.1,
+                    "stops": [
+                        [
+                            12,
+                            8
+                        ],
+                        [
+                            16,
+                            12
+                        ]
+                    ]
+                },
+                "icon-image": "circle",
+                "text-font": [
+                    "Hack Regular",
+                    "Arial Unicode MS Regular"
+                ],
+                "icon-allow-overlap": true,
+                "text-justify": "center",
+                "icon-size": 1,
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "icon-ignore-placement": true
+            },
+            "metadata": {
+                "mapbox:group": "1445386383953.8203"
+            },
+            "filter": [
+                "==",
+                "maki",
+                "cemetery"
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "poi-label cemetery",
+            "paint": {
+                "text-translate": [
+                    0,
+                    10
+                ],
+                "text-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            18,
+                            "rgba(140,94,126,1)"
+                        ],
+                        [
+                            19,
+                            "rgba(227,175,210,1)"
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "poi_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "text-optional": true,
+                "text-size": {
+                    "base": 1.1,
+                    "stops": [
+                        [
+                            12,
+                            8
+                        ],
+                        [
+                            16,
+                            9
+                        ]
+                    ]
+                },
+                "icon-image": "hexagon",
+                "text-font": [
+                    "Hack Regular",
+                    "Arial Unicode MS Regular"
+                ],
+                "icon-allow-overlap": true,
+                "text-justify": "center",
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "icon-ignore-placement": true
+            },
+            "metadata": {
+                "mapbox:group": "1445386383953.8203"
+            },
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "maki",
+                    "school",
+                    "college"
+                ],
+                [
+                    "in",
+                    "scalerank",
+                    3,
+                    4
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "poi-label school 2",
+            "paint": {
+                "text-translate": [
+                    0,
+                    10
+                ],
+                "text-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            18,
+                            "rgba(78,120,148,1)"
+                        ],
+                        [
+                            19,
+                            "rgba(155,195,224,1)"
+                        ]
+                    ]
+                },
+                "icon-opacity": 0.4
+            },
+            "source-layer": "poi_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "text-optional": true,
+                "text-size": {
+                    "base": 1.1,
+                    "stops": [
+                        [
+                            12,
+                            8
+                        ],
+                        [
+                            16,
+                            12
+                        ]
+                    ]
+                },
+                "icon-image": "hexagon",
+                "text-font": [
+                    "Hack Regular",
+                    "Arial Unicode MS Regular"
+                ],
+                "icon-allow-overlap": true,
+                "text-justify": "center",
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "icon-ignore-placement": true
+            },
+            "metadata": {
+                "mapbox:group": "1445386383953.8203"
+            },
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "maki",
+                    "school",
+                    "college"
+                ],
+                [
+                    "in",
+                    "scalerank",
+                    1,
+                    2
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "poi-label school 1",
+            "paint": {
+                "text-translate": [
+                    0,
+                    10
+                ],
+                "text-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            18,
+                            "rgba(78,120,148,1)"
+                        ],
+                        [
+                            19,
+                            "rgba(155,195,224,1)"
+                        ]
+                    ]
+                },
+                "icon-opacity": 0.8
+            },
+            "source-layer": "poi_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "text-optional": true,
+                "text-size": {
+                    "base": 1.1,
+                    "stops": [
+                        [
+                            12,
+                            8
+                        ],
+                        [
+                            16,
+                            9
+                        ]
+                    ]
+                },
+                "icon-image": "square",
+                "text-font": [
+                    "Hack Regular",
+                    "Arial Unicode MS Regular"
+                ],
+                "icon-allow-overlap": true,
+                "text-justify": "center",
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "icon-ignore-placement": true
+            },
+            "metadata": {
+                "mapbox:group": "1445386383953.8203"
+            },
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "maki",
+                    "park",
+                    "golf",
+                    "dog-park",
+                    "campsite",
+                    ""
+                ],
+                [
+                    "in",
+                    "scalerank",
+                    3,
+                    4
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "poi-label park 2",
+            "paint": {
+                "text-translate": [
+                    0,
+                    10
+                ],
+                "text-color": "rgba(104,156,59,1)",
+                "icon-opacity": 0.4
+            },
+            "source-layer": "poi_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "text-optional": true,
+                "text-size": {
+                    "base": 1.1,
+                    "stops": [
+                        [
+                            12,
+                            8
+                        ],
+                        [
+                            16,
+                            12
+                        ]
+                    ]
+                },
+                "icon-image": "square",
+                "text-font": [
+                    "Hack Regular",
+                    "Arial Unicode MS Regular"
+                ],
+                "icon-allow-overlap": true,
+                "text-justify": "center",
+                "text-anchor": "top",
+                "text-field": "{name}",
+                "icon-ignore-placement": true
+            },
+            "metadata": {
+                "mapbox:group": "1445386383953.8203"
+            },
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "maki",
+                    "park",
+                    "golf",
+                    "dog-park",
+                    "campsite",
+                    ""
+                ],
+                [
+                    "in",
+                    "scalerank",
+                    1,
+                    2
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "poi-label park 1",
+            "paint": {
+                "text-translate": [
+                    0,
+                    10
+                ],
+                "text-color": "rgba(104,156,59,1)",
+                "icon-opacity": 0.8
+            },
+            "source-layer": "poi_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "text-optional": true,
+                "text-field": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            11,
+                            "{ref}"
+                        ],
+                        [
+                            12,
+                            "{name}"
+                        ]
+                    ]
+                },
+                "text-anchor": "center",
+                "text-size": {
+                    "base": 1.35,
+                    "stops": [
+                        [
+                            10,
+                            9
+                        ],
+                        [
+                            16,
+                            16
+                        ]
+                    ]
+                },
+                "text-font": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            11,
+                            [
+                                "Hack Bold",
+                                "Arial Unicode MS Regular"
+                            ]
+                        ],
+                        [
+                            12,
+                            [
+                                "Hack Regular",
+                                "Arial Unicode MS Regular"
+                            ]
+                        ]
+                    ]
+                },
+                "text-justify": "center",
+                "text-letter-spacing": 0.2
+            },
+            "metadata": {
+                "mapbox:group": "1445386383953.8203"
+            },
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "maki",
+                    "airport",
+                    "rocket",
+                    "airfield",
+                    "heliport"
+                ],
+                [
+                    "in",
+                    "scalerank",
+                    1,
+                    2
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "poi-label airport",
+            "paint": {
+                "text-color": "rgba(179,132,75,1)"
+            },
+            "source-layer": "poi_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "text-size": {
+                    "base": 1.1,
+                    "stops": [
+                        [
+                            12,
+                            7
+                        ],
+                        [
+                            16,
+                            10
+                        ]
+                    ]
+                },
+                "icon-image": "circle-12",
+                "text-transform": "uppercase",
+                "symbol-spacing": 350,
+                "text-font": [
+                    "Hack Regular",
+                    "Arial Unicode MS Regular"
+                ],
+                "symbol-placement": "line",
+                "visibility": "visible",
+                "text-rotation-alignment": "map",
+                "text-field": "{name}",
+                "text-letter-spacing": 0.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "waterway-label",
+            "paint": {
+                "text-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            14,
+                            "#666"
+                        ],
+                        [
+                            18,
+                            "#777"
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "waterway_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "text-size": {
+                    "base": 1.6,
+                    "stops": [
+                        [
+                            12,
+                            8
+                        ],
+                        [
+                            18,
+                            12
+                        ]
+                    ]
+                },
+                "text-transform": "uppercase",
+                "text-font": [
+                    "Hack Regular",
+                    "Arial Unicode MS Regular"
+                ],
+                "symbol-placement": "line",
+                "visibility": "visible",
+                "text-rotation-alignment": "map",
+                "text-field": "{name}",
+                "text-letter-spacing": 0.15
+            },
+            "metadata": {
+                "mapbox:group": "1444869402214.2546"
+            },
+            "filter": [
+                "in",
+                "class",
+                "street",
+                "street_limited",
+                "main"
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "road-label main",
+            "paint": {
+                "text-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            14,
+                            "#888"
+                        ],
+                        [
+                            18,
+                            "#999"
+                        ],
+                        [
+                            19,
+                            "#eee"
+                        ]
+                    ]
+                },
+                "text-halo-color": "rgba(25,28,26,1)",
+                "text-halo-width": 1,
+                "text-halo-blur": 1
+            },
+            "source-layer": "road_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "text-size": {
+                    "base": 1.6,
+                    "stops": [
+                        [
+                            12,
+                            7
+                        ],
+                        [
+                            18,
+                            10
+                        ]
+                    ]
+                },
+                "text-transform": "uppercase",
+                "text-font": [
+                    "Hack Regular",
+                    "Arial Unicode MS Regular"
+                ],
+                "symbol-placement": "line",
+                "visibility": "visible",
+                "text-rotation-alignment": "map",
+                "text-field": "{name}",
+                "text-letter-spacing": 0.15
+            },
+            "metadata": {
+                "mapbox:group": "1444869402214.2546"
+            },
+            "filter": [
+                "!in",
+                "class",
+                "street_limited",
+                "street",
+                "main",
+                "motorway"
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "road-label other",
+            "paint": {
+                "text-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            18,
+                            "#888"
+                        ],
+                        [
+                            19,
+                            "#eee"
+                        ]
+                    ]
+                },
+                "text-halo-width": 4
+            },
+            "source-layer": "road_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "text-size": {
+                    "base": 1.6,
+                    "stops": [
+                        [
+                            12,
+                            10
+                        ],
+                        [
+                            18,
+                            16
+                        ]
+                    ]
+                },
+                "text-transform": "uppercase",
+                "symbol-spacing": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            18,
+                            250
+                        ],
+                        [
+                            19,
+                            500
+                        ]
+                    ]
+                },
+                "text-font": [
+                    "Hack Regular",
+                    "Arial Unicode MS Regular"
+                ],
+                "symbol-placement": "line",
+                "visibility": "visible",
+                "text-rotation-alignment": "map",
+                "text-field": "{name}",
+                "text-letter-spacing": 0.1
+            },
+            "metadata": {
+                "mapbox:group": "1444869402214.2546"
+            },
+            "filter": [
+                "==",
+                "class",
+                "motorway"
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "road-label motorway",
+            "paint": {
+                "text-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            14,
+                            "#888"
+                        ],
+                        [
+                            18,
+                            "#999"
+                        ],
+                        [
+                            19,
+                            "white"
+                        ]
+                    ]
+                },
+                "text-halo-color": "rgba(71,66,44,1)",
+                "text-halo-width": 1,
+                "text-halo-blur": 1
+            },
+            "source-layer": "road_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "text-size": 8,
+                "text-allow-overlap": false,
+                "icon-image": "shield",
+                "icon-rotation-alignment": "viewport",
+                "text-ignore-placement": false,
+                "text-font": [
+                    "Hack Bold",
+                    "Arial Unicode MS Regular"
+                ],
+                "symbol-placement": "line",
+                "visibility": "visible",
+                "text-rotation-alignment": "viewport",
+                "text-field": "I-{ref}"
+            },
+            "metadata": {
+                "mapbox:group": "1444869402214.2546"
+            },
+            "filter": [
+                "in",
+                "shield",
+                "us-interstate",
+                "us-interstate-duplex",
+                "us-interstate-business"
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "shield",
+            "paint": {
+                "text-color": "#191c1a",
+                "icon-opacity": 0.8,
+                "text-translate": [
+                    0,
+                    1.5
+                ]
+            },
+            "source-layer": "road_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "text-size": 8,
+                "text-allow-overlap": false,
+                "icon-image": "shield",
+                "icon-rotation-alignment": "viewport",
+                "text-ignore-placement": false,
+                "text-font": [
+                    "Hack Bold",
+                    "Arial Unicode MS Regular"
+                ],
+                "symbol-placement": "line",
+                "visibility": "visible",
+                "text-rotation-alignment": "viewport",
+                "text-field": "{ref}"
+            },
+            "metadata": {
+                "mapbox:group": "1444869402214.2546"
+            },
+            "filter": [
+                "all",
+                [
+                    "!in",
+                    "shield",
+                    "us-interstate",
+                    "us-interstate-duplex",
+                    "us-interstate-business"
+                ],
+                [
+                    "<=",
+                    "reflen",
+                    7
+                ],
+                [
+                    ">",
+                    "reflen",
+                    3
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "shield other",
+            "paint": {
+                "text-color": "#191c1a",
+                "icon-opacity": 0.8,
+                "text-translate": [
+                    0,
+                    1.5
+                ]
+            },
+            "source-layer": "road_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "text-size": 8,
+                "text-allow-overlap": false,
+                "icon-image": "shield-sm",
+                "icon-rotation-alignment": "viewport",
+                "text-ignore-placement": false,
+                "text-font": [
+                    "Hack Bold",
+                    "Arial Unicode MS Regular"
+                ],
+                "symbol-placement": "line",
+                "visibility": "visible",
+                "text-rotation-alignment": "viewport",
+                "text-field": "{ref}"
+            },
+            "metadata": {
+                "mapbox:group": "1444869402214.2546"
+            },
+            "filter": [
+                "all",
+                [
+                    "!in",
+                    "shield",
+                    "us-interstate",
+                    "us-interstate-duplex",
+                    "us-interstate-business"
+                ],
+                [
+                    "<=",
+                    "reflen",
+                    3
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "shield other sm",
+            "paint": {
+                "text-color": "#191c1a",
+                "icon-opacity": 0.8,
+                "text-translate": [
+                    0,
+                    1.5
+                ]
+            },
+            "source-layer": "road_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "icon-image": "circle-12",
+                "visibility": "visible",
+                "text-field": "{name}",
+                "text-font": [
+                    "Hack Regular",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            4,
+                            12
+                        ],
+                        [
+                            6,
+                            16
+                        ]
+                    ]
+                }
+            },
+            "metadata": {
+                "mapbox:group": "1444869379063.1243"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "in",
+                    "labelrank",
+                    4,
+                    5,
+                    6
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "marine-label point other",
+            "paint": {
+                "text-color": "#353535"
+            },
+            "source-layer": "marine_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "icon-image": "circle-12",
+                "visibility": "visible",
+                "text-field": "{name}",
+                "text-font": [
+                    "Hack Regular",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            3,
+                            13
+                        ],
+                        [
+                            5,
+                            18
+                        ]
+                    ]
+                }
+            },
+            "metadata": {
+                "mapbox:group": "1444869379063.1243"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "==",
+                    "labelrank",
+                    3
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "marine-label point 3",
+            "paint": {
+                "text-color": "#353535"
+            },
+            "source-layer": "marine_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "icon-image": "circle-12",
+                "visibility": "visible",
+                "text-field": "{name}",
+                "text-font": [
+                    "Hack Regular",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            3,
+                            14
+                        ],
+                        [
+                            5,
+                            24
+                        ]
+                    ]
+                }
+            },
+            "metadata": {
+                "mapbox:group": "1444869379063.1243"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "==",
+                    "labelrank",
+                    2
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "marine-label point 2",
+            "paint": {
+                "text-color": "#353535"
+            },
+            "source-layer": "marine_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "icon-image": "circle-12",
+                "visibility": "visible",
+                "text-field": "{name}",
+                "text-font": [
+                    "Hack Regular",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            1,
+                            12
+                        ],
+                        [
+                            4,
+                            30
+                        ]
+                    ]
+                }
+            },
+            "metadata": {
+                "mapbox:group": "1444869379063.1243"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "==",
+                    "labelrank",
+                    1
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "marine-label point 1",
+            "paint": {
+                "text-color": "#353535"
+            },
+            "source-layer": "marine_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "icon-image": "circle-12",
+                "visibility": "visible",
+                "text-field": "{name}",
+                "text-font": [
+                    "Hack Regular",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            4,
+                            12
+                        ],
+                        [
+                            6,
+                            16
+                        ]
+                    ]
+                },
+                "symbol-placement": "line",
+                "text-rotation-alignment": "map"
+            },
+            "metadata": {
+                "mapbox:group": "1444869379063.1243"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "in",
+                    "labelrank",
+                    4,
+                    5,
+                    6
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "marine-label line other",
+            "paint": {
+                "text-color": "#353535"
+            },
+            "source-layer": "marine_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "icon-image": "circle-12",
+                "visibility": "visible",
+                "text-field": "{name}",
+                "text-font": [
+                    "Hack Regular",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            3,
+                            13
+                        ],
+                        [
+                            5,
+                            18
+                        ]
+                    ]
+                },
+                "symbol-placement": "line",
+                "text-rotation-alignment": "map"
+            },
+            "metadata": {
+                "mapbox:group": "1444869379063.1243"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "==",
+                    "labelrank",
+                    3
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "marine-label line 3",
+            "paint": {
+                "text-color": "#353535"
+            },
+            "source-layer": "marine_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "icon-image": "circle-12",
+                "visibility": "visible",
+                "text-field": "{name}",
+                "text-font": [
+                    "Hack Regular",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            3,
+                            14
+                        ],
+                        [
+                            5,
+                            24
+                        ]
+                    ]
+                },
+                "symbol-placement": "line",
+                "text-rotation-alignment": "map",
+                "text-allow-overlap": false
+            },
+            "metadata": {
+                "mapbox:group": "1444869379063.1243"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "==",
+                    "labelrank",
+                    2
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "marine-label line 2",
+            "paint": {
+                "text-color": "#353535"
+            },
+            "source-layer": "marine_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "icon-image": "circle-12",
+                "visibility": "visible",
+                "text-field": "{name}",
+                "text-font": [
+                    "Hack Regular",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            1,
+                            12
+                        ],
+                        [
+                            4,
+                            30
+                        ]
+                    ]
+                },
+                "symbol-placement": "line",
+                "text-rotation-alignment": "map"
+            },
+            "metadata": {
+                "mapbox:group": "1444869379063.1243"
+            },
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "$type",
+                    "Point",
+                    "LineString"
+                ],
+                [
+                    "==",
+                    "labelrank",
+                    1
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "marine-label line 1",
+            "paint": {
+                "text-color": "#353535"
+            },
+            "source-layer": "marine_label"
+        },
+        {
+            "layout": {
+                "icon-image": "circle-12",
+                "visibility": "visible",
+                "text-field": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            2,
+                            "{abbr}"
+                        ],
+                        [
+                            4,
+                            "{name_en}"
+                        ]
+                    ]
+                },
+                "text-font": [
+                    "Hack Regular",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-transform": "uppercase",
+                "text-size": {
+                    "base": 1.05,
+                    "stops": [
+                        [
+                            2,
+                            6.5
+                        ],
+                        [
+                            18,
+                            34
+                        ]
+                    ]
+                },
+                "text-letter-spacing": 0.3
+            },
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "state-label 1",
+            "paint": {
+                "text-color": "rgba(96,145,135,1)"
+            },
+            "source-layer": "state_label",
+            "interactive": true
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "filter": [
+                "in",
+                "capital",
+                2,
+                3,
+                4
+            ],
+            "type": "circle",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "place-label capital",
+            "paint": {
+                "circle-radius": {
+                    "base": 1.25,
+                    "stops": [
+                        [
+                            0,
+                            2
+                        ],
+                        [
+                            22,
+                            40
+                        ]
+                    ]
+                },
+                "circle-color": "rgba(237,28,70,0.15)"
+            },
+            "source-layer": "place_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "text-anchor": "center",
+                "visibility": "visible",
+                "text-field": "{name_en}",
+                "text-font": [
+                    "Hack RegularOblique",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-size": {
+                    "base": 1.2,
+                    "stops": [
+                        [
+                            6,
+                            7
+                        ],
+                        [
+                            18,
+                            11
+                        ]
+                    ]
+                },
+                "text-max-width": 7,
+                "text-transform": "uppercase",
+                "text-letter-spacing": 0.3
+            },
+            "metadata": {
+                "mapbox:group": "1444836261019.852"
+            },
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "type",
+                    "hamlet",
+                    "neighbourhood",
+                    "suburb"
+                ],
+                [
+                    ">",
+                    "localrank",
+                    4
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "place-label neightborhood 2",
+            "paint": {
+                "text-color": "rgba(173,135,134,1)"
+            },
+            "source-layer": "place_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "text-anchor": "center",
+                "visibility": "visible",
+                "text-field": "{name_en}",
+                "text-font": [
+                    "Hack RegularOblique",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-size": {
+                    "base": 1.2,
+                    "stops": [
+                        [
+                            6,
+                            7
+                        ],
+                        [
+                            18,
+                            14
+                        ]
+                    ]
+                },
+                "text-max-width": 7,
+                "text-transform": "uppercase",
+                "text-letter-spacing": 0.3
+            },
+            "metadata": {
+                "mapbox:group": "1444836261019.852"
+            },
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "type",
+                    "hamlet",
+                    "neighbourhood",
+                    "suburb"
+                ],
+                [
+                    "<=",
+                    "localrank",
+                    4
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "place-label neightborhood 1",
+            "paint": {
+                "text-color": "rgba(173,135,134,1)"
+            },
+            "source-layer": "place_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "text-anchor": "center",
+                "visibility": "visible",
+                "text-field": "{name_en}",
+                "text-font": [
+                    "Hack RegularOblique",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-size": {
+                    "base": 0.9,
+                    "stops": [
+                        [
+                            6,
+                            7.5
+                        ],
+                        [
+                            14,
+                            11
+                        ]
+                    ]
+                },
+                "text-max-width": 7
+            },
+            "metadata": {
+                "mapbox:group": "1444836261019.852"
+            },
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "type",
+                    "village",
+                    "town"
+                ],
+                [
+                    "!in",
+                    "scalerank",
+                    0,
+                    1,
+                    3,
+                    2,
+                    4
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "place-label other 2",
+            "paint": {
+                "text-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            18,
+                            "rgba(117,125,76,1)"
+                        ],
+                        [
+                            19,
+                            "rgba(215,224,166,1)"
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "place_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "text-anchor": "center",
+                "visibility": "visible",
+                "text-field": "{name_en}",
+                "text-font": [
+                    "Hack RegularOblique",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-size": {
+                    "base": 0.9,
+                    "stops": [
+                        [
+                            6,
+                            7.5
+                        ],
+                        [
+                            14,
+                            13
+                        ]
+                    ]
+                },
+                "text-max-width": 7
+            },
+            "metadata": {
+                "mapbox:group": "1444836261019.852"
+            },
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "type",
+                    "village",
+                    "town"
+                ],
+                [
+                    "in",
+                    "scalerank",
+                    0,
+                    1,
+                    3,
+                    2,
+                    4
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "place-label other 1",
+            "paint": {
+                "text-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            18,
+                            "rgba(117,125,76,1)"
+                        ],
+                        [
+                            19,
+                            "rgba(215,224,166,1)"
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "place_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "text-anchor": "center",
+                "visibility": "visible",
+                "text-field": "{name_en}",
+                "text-font": [
+                    "Hack Bold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-size": {
+                    "base": 0.9,
+                    "stops": [
+                        [
+                            6,
+                            8
+                        ],
+                        [
+                            14,
+                            20
+                        ]
+                    ]
+                },
+                "text-max-width": 8
+            },
+            "metadata": {
+                "mapbox:group": "1444836261019.852"
+            },
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "scalerank",
+                    5,
+                    6,
+                    7,
+                    8,
+                    9
+                ],
+                [
+                    "==",
+                    "type",
+                    "city"
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "place-label city small",
+            "paint": {
+                "text-color": "#757575"
+            },
+            "source-layer": "place_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "text-anchor": "center",
+                "visibility": "visible",
+                "text-field": "{name_en}",
+                "text-font": [
+                    "Hack Bold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-size": {
+                    "base": 0.9,
+                    "stops": [
+                        [
+                            5,
+                            10
+                        ],
+                        [
+                            12,
+                            21
+                        ]
+                    ]
+                },
+                "text-max-width": 8
+            },
+            "metadata": {
+                "mapbox:group": "1444836261019.852"
+            },
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "scalerank",
+                    3,
+                    4,
+                    2
+                ],
+                [
+                    "==",
+                    "type",
+                    "city"
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "place-label city med",
+            "paint": {
+                "text-color": "#888"
+            },
+            "source-layer": "place_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            4,
+                            11
+                        ],
+                        [
+                            10,
+                            20
+                        ]
+                    ]
+                },
+                "icon-image": "asterisk",
+                "text-transform": "uppercase",
+                "text-font": [
+                    "Hack Bold",
+                    "Arial Unicode MS Regular"
+                ],
+                "visibility": "visible",
+                "text-anchor": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            7,
+                            "top"
+                        ],
+                        [
+                            8,
+                            "center"
+                        ]
+                    ]
+                },
+                "text-field": "{name_en}",
+                "text-letter-spacing": 0.1,
+                "text-max-width": 6
+            },
+            "metadata": {
+                "mapbox:group": "1444836261019.852"
+            },
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "scalerank",
+                    1,
+                    0
+                ],
+                [
+                    "==",
+                    "type",
+                    "city"
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "place-label city lg",
+            "paint": {
+                "text-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            6,
+                            "#888"
+                        ],
+                        [
+                            8,
+                            "#aaa"
+                        ]
+                    ]
+                },
+                "text-translate": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            7,
+                            [
+                                0,
+                                8
+                            ]
+                        ],
+                        [
+                            8,
+                            [
+                                0,
+                                0
+                            ]
+                        ]
+                    ]
+                },
+                "icon-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            7.75,
+                            0.8
+                        ],
+                        [
+                            8,
+                            0
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "place_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "icon-image": "circle-12",
+                "text-field": "{name_en}",
+                "text-font": [
+                    "Hack Regular",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-size": {
+                    "base": 1.4,
+                    "stops": [
+                        [
+                            3,
+                            8
+                        ],
+                        [
+                            7,
+                            18
+                        ]
+                    ]
+                }
+            },
+            "metadata": {
+                "mapbox:group": "1444783827820.209"
+            },
+            "filter": [
+                "in",
+                "scalerank",
+                5,
+                6
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "country-label 3",
+            "paint": {
+                "text-color": "rgba(132,156,128,1)"
+            },
+            "source-layer": "country_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "icon-image": "circle-12",
+                "text-field": "{name_en}",
+                "text-font": [
+                    "Hack Regular",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-size": {
+                    "base": 1.4,
+                    "stops": [
+                        [
+                            2,
+                            8
+                        ],
+                        [
+                            7,
+                            18
+                        ]
+                    ]
+                }
+            },
+            "metadata": {
+                "mapbox:group": "1444783827820.209"
+            },
+            "filter": [
+                "in",
+                "scalerank",
+                3,
+                4
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "country-label 2",
+            "paint": {
+                "text-color": "rgba(132,156,128,1)"
+            },
+            "source-layer": "country_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "icon-image": "circle-12",
+                "text-field": "{name_en}",
+                "text-font": [
+                    "Hack Regular",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-size": {
+                    "base": 1.6,
+                    "stops": [
+                        [
+                            0,
+                            9
+                        ],
+                        [
+                            5,
+                            22
+                        ]
+                    ]
+                },
+                "text-ignore-placement": false,
+                "text-allow-overlap": false
+            },
+            "metadata": {
+                "mapbox:group": "1444783827820.209"
+            },
+            "filter": [
+                "==",
+                "scalerank",
+                2
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "country-label 1",
+            "paint": {
+                "text-color": "rgba(132,156,128,1)"
+            },
+            "source-layer": "country_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "icon-image": "circle-12",
+                "text-field": "{name_en}",
+                "text-font": [
+                    "Hack Regular",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-size": {
+                    "base": 1.6,
+                    "stops": [
+                        [
+                            0,
+                            10
+                        ],
+                        [
+                            5,
+                            26
+                        ]
+                    ]
+                },
+                "text-ignore-placement": false,
+                "text-allow-overlap": false
+            },
+            "metadata": {
+                "mapbox:group": "1444783827820.209"
+            },
+            "filter": [
+                "==",
+                "scalerank",
+                1
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "country-label 0",
+            "paint": {
+                "text-color": "rgba(132,156,128,1)"
+            },
+            "source-layer": "country_label"
+        },
+        {
+            "type": "background",
+            "paint": {
+                "background-color": "rgba(0,0,0,0)",
+                "background-pattern": "grain",
+                "background-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            2,
+                            0.4
+                        ],
+                        [
+                            8,
+                            0.6
+                        ]
+                    ]
+                }
+            },
+            "layout": {
+                "visibility": "visible"
+            },
+            "id": "grain",
+            "interactive": true
+        }
+    ],
+    "created": "2015-12-03T08:59:26.442Z",
+    "id": "cihq0gzfn001wb0kpzha7wkm9",
+    "modified": "2015-12-03T08:59:26.442Z",
+    "owner": "maper",
+    "draft": false
+}

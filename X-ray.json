@@ -1,0 +1,3528 @@
+{
+    "version": 8,
+    "name": "X-ray",
+    "sources": {
+        "mapbox://mapbox.mapbox-streets-v6": {
+            "url": "mapbox://mapbox.mapbox-streets-v6",
+            "type": "vector"
+        },
+        "mapbox://mapbox.mapbox-terrain-v2": {
+            "url": "mapbox://mapbox.mapbox-terrain-v2",
+            "type": "vector"
+        }
+    },
+    "sprite": "mapbox://sprites/maper/cihq0db4p001ub0kpmt63g2li",
+    "glyphs": "mapbox://fonts/maper/{fontstack}/{range}.pbf",
+    "layers": [
+        {
+            "id": "xray-background",
+            "xray": true,
+            "type": "background",
+            "paint": {
+                "background-color": "black"
+            },
+            "interactive": true
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-landuse-fill-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "landuse",
+            "type": "fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(128, 128, 128, 0.1)",
+                "fill-outline-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Polygon"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-waterway-fill-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "waterway",
+            "type": "fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(128, 128, 128, 0.1)",
+                "fill-outline-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Polygon"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-water-fill-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "water",
+            "type": "fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(128, 128, 128, 0.1)",
+                "fill-outline-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Polygon"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-aeroway-fill-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "aeroway",
+            "type": "fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(128, 128, 128, 0.1)",
+                "fill-outline-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Polygon"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-barrier_line-fill-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "barrier_line",
+            "type": "fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(128, 128, 128, 0.1)",
+                "fill-outline-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Polygon"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-building-fill-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "building",
+            "type": "fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(128, 128, 128, 0.1)",
+                "fill-outline-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Polygon"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-landuse_overlay-fill-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "landuse_overlay",
+            "type": "fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(128, 128, 128, 0.1)",
+                "fill-outline-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Polygon"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-tunnel-fill-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "tunnel",
+            "type": "fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(128, 128, 128, 0.1)",
+                "fill-outline-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Polygon"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-road-fill-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "road",
+            "type": "fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(128, 128, 128, 0.1)",
+                "fill-outline-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Polygon"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-bridge-fill-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "bridge",
+            "type": "fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(128, 128, 128, 0.1)",
+                "fill-outline-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Polygon"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-admin-fill-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "admin",
+            "type": "fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(128, 128, 128, 0.1)",
+                "fill-outline-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Polygon"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-country_label-fill-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "country_label",
+            "type": "fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(128, 128, 128, 0.1)",
+                "fill-outline-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Polygon"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-marine_label-fill-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "marine_label",
+            "type": "fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(128, 128, 128, 0.1)",
+                "fill-outline-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Polygon"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-state_label-fill-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "state_label",
+            "type": "fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(128, 128, 128, 0.1)",
+                "fill-outline-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Polygon"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-place_label-fill-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "place_label",
+            "type": "fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(128, 128, 128, 0.1)",
+                "fill-outline-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Polygon"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-water_label-fill-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "water_label",
+            "type": "fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(128, 128, 128, 0.1)",
+                "fill-outline-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Polygon"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-poi_label-fill-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "poi_label",
+            "type": "fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(128, 128, 128, 0.1)",
+                "fill-outline-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Polygon"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-road_label-fill-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "road_label",
+            "type": "fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(128, 128, 128, 0.1)",
+                "fill-outline-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Polygon"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-waterway_label-fill-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "waterway_label",
+            "type": "fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(128, 128, 128, 0.1)",
+                "fill-outline-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Polygon"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-housenum_label-fill-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "housenum_label",
+            "type": "fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(128, 128, 128, 0.1)",
+                "fill-outline-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Polygon"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-terrain-v2-landcover-fill-dim",
+            "source": "mapbox://mapbox.mapbox-terrain-v2",
+            "source-layer": "landcover",
+            "type": "fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(128, 128, 128, 0.1)",
+                "fill-outline-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Polygon"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-terrain-v2-hillshade-fill-dim",
+            "source": "mapbox://mapbox.mapbox-terrain-v2",
+            "source-layer": "hillshade",
+            "type": "fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(128, 128, 128, 0.1)",
+                "fill-outline-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Polygon"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-terrain-v2-contour-fill-dim",
+            "source": "mapbox://mapbox.mapbox-terrain-v2",
+            "source-layer": "contour",
+            "type": "fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(128, 128, 128, 0.1)",
+                "fill-outline-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Polygon"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-landuse-line-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "landuse",
+            "type": "line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-waterway-line-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "waterway",
+            "type": "line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-water-line-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "water",
+            "type": "line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-aeroway-line-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "aeroway",
+            "type": "line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-barrier_line-line-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "barrier_line",
+            "type": "line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-building-line-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "building",
+            "type": "line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-landuse_overlay-line-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "landuse_overlay",
+            "type": "line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-tunnel-line-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "tunnel",
+            "type": "line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-road-line-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "road",
+            "type": "line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-bridge-line-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "bridge",
+            "type": "line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-admin-line-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "admin",
+            "type": "line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-country_label-line-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "country_label",
+            "type": "line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-marine_label-line-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "marine_label",
+            "type": "line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-state_label-line-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "state_label",
+            "type": "line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-place_label-line-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "place_label",
+            "type": "line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-water_label-line-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "water_label",
+            "type": "line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-poi_label-line-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "poi_label",
+            "type": "line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-road_label-line-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "road_label",
+            "type": "line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-waterway_label-line-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "waterway_label",
+            "type": "line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-housenum_label-line-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "housenum_label",
+            "type": "line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-terrain-v2-landcover-line-dim",
+            "source": "mapbox://mapbox.mapbox-terrain-v2",
+            "source-layer": "landcover",
+            "type": "line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-terrain-v2-hillshade-line-dim",
+            "source": "mapbox://mapbox.mapbox-terrain-v2",
+            "source-layer": "hillshade",
+            "type": "line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-terrain-v2-contour-line-dim",
+            "source": "mapbox://mapbox.mapbox-terrain-v2",
+            "source-layer": "contour",
+            "type": "line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(128, 128, 128, 0.3)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-landuse-linetext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "landuse",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "symbol-placement": "line",
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-field": "{undefined}",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-waterway-linetext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "waterway",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "symbol-placement": "line",
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-field": "{undefined}",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-water-linetext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "water",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "symbol-placement": "line",
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-field": "{undefined}",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-aeroway-linetext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "aeroway",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "symbol-placement": "line",
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-field": "{undefined}",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-barrier_line-linetext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "barrier_line",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "symbol-placement": "line",
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-field": "{undefined}",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-building-linetext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "building",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "symbol-placement": "line",
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-field": "{undefined}",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-landuse_overlay-linetext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "landuse_overlay",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "symbol-placement": "line",
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-field": "{undefined}",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-tunnel-linetext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "tunnel",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "symbol-placement": "line",
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-field": "{undefined}",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-road-linetext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "road",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "symbol-placement": "line",
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-field": "{undefined}",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-bridge-linetext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "bridge",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "symbol-placement": "line",
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-field": "{undefined}",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-admin-linetext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "admin",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "symbol-placement": "line",
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-field": "{undefined}",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-country_label-linetext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "country_label",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "symbol-placement": "line",
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-field": "{name}",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-marine_label-linetext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "marine_label",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "symbol-placement": "line",
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-field": "{name}",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-state_label-linetext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "state_label",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "symbol-placement": "line",
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-field": "{name}",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-place_label-linetext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "place_label",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "symbol-placement": "line",
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-field": "{name}",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-water_label-linetext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "water_label",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "symbol-placement": "line",
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-field": "{name}",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-poi_label-linetext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "poi_label",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "symbol-placement": "line",
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-field": "{name}",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-road_label-linetext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "road_label",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "symbol-placement": "line",
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-field": "{name}",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-waterway_label-linetext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "waterway_label",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "symbol-placement": "line",
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-field": "{name}",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-housenum_label-linetext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "housenum_label",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "symbol-placement": "line",
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-field": "{undefined}",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-terrain-v2-landcover-linetext-dim",
+            "source": "mapbox://mapbox.mapbox-terrain-v2",
+            "source-layer": "landcover",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "symbol-placement": "line",
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-field": "{undefined}",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-terrain-v2-hillshade-linetext-dim",
+            "source": "mapbox://mapbox.mapbox-terrain-v2",
+            "source-layer": "hillshade",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "symbol-placement": "line",
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-field": "{undefined}",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-terrain-v2-contour-linetext-dim",
+            "source": "mapbox://mapbox.mapbox-terrain-v2",
+            "source-layer": "contour",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "symbol-placement": "line",
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-field": "{undefined}",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-landuse-point-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "landuse",
+            "type": "circle",
+            "interactive": true,
+            "layout": {},
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgb(110, 110, 110)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-waterway-point-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "waterway",
+            "type": "circle",
+            "interactive": true,
+            "layout": {},
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgb(110, 110, 110)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-water-point-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "water",
+            "type": "circle",
+            "interactive": true,
+            "layout": {},
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgb(110, 110, 110)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-aeroway-point-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "aeroway",
+            "type": "circle",
+            "interactive": true,
+            "layout": {},
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgb(110, 110, 110)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-barrier_line-point-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "barrier_line",
+            "type": "circle",
+            "interactive": true,
+            "layout": {},
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgb(110, 110, 110)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-building-point-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "building",
+            "type": "circle",
+            "interactive": true,
+            "layout": {},
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgb(110, 110, 110)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-landuse_overlay-point-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "landuse_overlay",
+            "type": "circle",
+            "interactive": true,
+            "layout": {},
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgb(110, 110, 110)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-tunnel-point-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "tunnel",
+            "type": "circle",
+            "interactive": true,
+            "layout": {},
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgb(110, 110, 110)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-road-point-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "road",
+            "type": "circle",
+            "interactive": true,
+            "layout": {},
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgb(110, 110, 110)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-bridge-point-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "bridge",
+            "type": "circle",
+            "interactive": true,
+            "layout": {},
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgb(110, 110, 110)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-admin-point-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "admin",
+            "type": "circle",
+            "interactive": true,
+            "layout": {},
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgb(110, 110, 110)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-country_label-point-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "country_label",
+            "type": "circle",
+            "interactive": true,
+            "layout": {},
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgb(110, 110, 110)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-marine_label-point-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "marine_label",
+            "type": "circle",
+            "interactive": true,
+            "layout": {},
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgb(110, 110, 110)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-state_label-point-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "state_label",
+            "type": "circle",
+            "interactive": true,
+            "layout": {},
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgb(110, 110, 110)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-place_label-point-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "place_label",
+            "type": "circle",
+            "interactive": true,
+            "layout": {},
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgb(110, 110, 110)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-water_label-point-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "water_label",
+            "type": "circle",
+            "interactive": true,
+            "layout": {},
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgb(110, 110, 110)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-poi_label-point-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "poi_label",
+            "type": "circle",
+            "interactive": true,
+            "layout": {},
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgb(110, 110, 110)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-road_label-point-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "road_label",
+            "type": "circle",
+            "interactive": true,
+            "layout": {},
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgb(110, 110, 110)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-waterway_label-point-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "waterway_label",
+            "type": "circle",
+            "interactive": true,
+            "layout": {},
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgb(110, 110, 110)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-housenum_label-point-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "housenum_label",
+            "type": "circle",
+            "interactive": true,
+            "layout": {},
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgb(110, 110, 110)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-terrain-v2-landcover-point-dim",
+            "source": "mapbox://mapbox.mapbox-terrain-v2",
+            "source-layer": "landcover",
+            "type": "circle",
+            "interactive": true,
+            "layout": {},
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgb(110, 110, 110)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-terrain-v2-hillshade-point-dim",
+            "source": "mapbox://mapbox.mapbox-terrain-v2",
+            "source-layer": "hillshade",
+            "type": "circle",
+            "interactive": true,
+            "layout": {},
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgb(110, 110, 110)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-terrain-v2-contour-point-dim",
+            "source": "mapbox://mapbox.mapbox-terrain-v2",
+            "source-layer": "contour",
+            "type": "circle",
+            "interactive": true,
+            "layout": {},
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgb(110, 110, 110)"
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-landuse-pointtext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "landuse",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-field": "{class}",
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-anchor": "top",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-waterway-pointtext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "waterway",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-field": "{class}",
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-anchor": "top",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-water-pointtext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "water",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-field": "{osm_id}",
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-anchor": "top",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-aeroway-pointtext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "aeroway",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-field": "{osm_id}",
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-anchor": "top",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-barrier_line-pointtext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "barrier_line",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-field": "{class}",
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-anchor": "top",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-building-pointtext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "building",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-field": "{osm_id}",
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-anchor": "top",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-landuse_overlay-pointtext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "landuse_overlay",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-field": "{class}",
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-anchor": "top",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-tunnel-pointtext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "tunnel",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-field": "{class}",
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-anchor": "top",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-road-pointtext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "road",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-field": "{class}",
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-anchor": "top",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-bridge-pointtext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "bridge",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-field": "{class}",
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-anchor": "top",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-admin-pointtext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "admin",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-field": "{admin_level}",
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-anchor": "top",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-country_label-pointtext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "country_label",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-field": "{name}",
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-anchor": "top",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-marine_label-pointtext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "marine_label",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-field": "{name}",
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-anchor": "top",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-state_label-pointtext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "state_label",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-field": "{name}",
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-anchor": "top",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-place_label-pointtext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "place_label",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-field": "{name}",
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-anchor": "top",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-water_label-pointtext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "water_label",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-field": "{name}",
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-anchor": "top",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-poi_label-pointtext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "poi_label",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-field": "{name}",
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-anchor": "top",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-road_label-pointtext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "road_label",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-field": "{name}",
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-anchor": "top",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-waterway_label-pointtext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "waterway_label",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-field": "{name}",
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-anchor": "top",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-housenum_label-pointtext-dim",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "source-layer": "housenum_label",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-field": "{house_num}",
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-anchor": "top",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-terrain-v2-landcover-pointtext-dim",
+            "source": "mapbox://mapbox.mapbox-terrain-v2",
+            "source-layer": "landcover",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-field": "{class}",
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-anchor": "top",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-terrain-v2-hillshade-pointtext-dim",
+            "source": "mapbox://mapbox.mapbox-terrain-v2",
+            "source-layer": "hillshade",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-field": "{class}",
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-anchor": "top",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-terrain-v2-contour-pointtext-dim",
+            "source": "mapbox://mapbox.mapbox-terrain-v2",
+            "source-layer": "contour",
+            "type": "symbol",
+            "interactive": true,
+            "layout": {
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-field": "{ele}",
+                "text-font": [
+                    "Open Sans Semibold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-anchor": "top",
+                "text-size": 10
+            },
+            "paint": {
+                "text-color": "rgb(110, 110, 110)",
+                "text-halo-color": "rgba(0, 0, 0, 0.4)",
+                "text-halo-width": 1.2
+            },
+            "filter": [
+                "==",
+                "$type",
+                "Point"
+            ]
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-landuse-fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(221,85,391,0.12)",
+                "fill-outline-color": "rgba(221,85,391,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-landuse-fill-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-waterway-fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(204,374,340,0.12)",
+                "fill-outline-color": "rgba(204,374,340,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-waterway-fill-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-water-fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(204,374,238,0.12)",
+                "fill-outline-color": "rgba(204,374,238,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-water-fill-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-aeroway-fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(221,85,136,0.12)",
+                "fill-outline-color": "rgba(221,85,136,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-aeroway-fill-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-barrier_line-fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(323,374,170,0.12)",
+                "fill-outline-color": "rgba(323,374,170,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-barrier_line-fill-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-building-fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(136,289,102,0.12)",
+                "fill-outline-color": "rgba(136,289,102,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-building-fill-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-landuse_overlay-fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(221,391,187,0.12)",
+                "fill-outline-color": "rgba(221,391,187,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-landuse_overlay-fill-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-tunnel-fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(102,68,238,0.12)",
+                "fill-outline-color": "rgba(102,68,238,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-tunnel-fill-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-road-fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(255,204,68,0.12)",
+                "fill-outline-color": "rgba(255,204,68,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-road-fill-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-bridge-fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(136,357,85,0.12)",
+                "fill-outline-color": "rgba(136,357,85,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-bridge-fill-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-admin-fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(289,153,119,0.12)",
+                "fill-outline-color": "rgba(289,153,119,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-admin-fill-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-country_label-fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(306,68,85,0.12)",
+                "fill-outline-color": "rgba(306,68,85,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-country_label-fill-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-marine_label-fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(323,289,119,0.12)",
+                "fill-outline-color": "rgba(323,289,119,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-marine_label-fill-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-state_label-fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(187,323,102,0.12)",
+                "fill-outline-color": "rgba(187,323,102,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-state_label-fill-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-place_label-fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(204,340,102,0.12)",
+                "fill-outline-color": "rgba(204,340,102,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-place_label-fill-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-water_label-fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(204,340,238,0.12)",
+                "fill-outline-color": "rgba(204,340,238,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-water_label-fill-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-poi_label-fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(153,119,289,0.12)",
+                "fill-outline-color": "rgba(153,119,289,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-poi_label-fill-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-road_label-fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(136,238,255,0.12)",
+                "fill-outline-color": "rgba(136,238,255,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-road_label-fill-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-waterway_label-fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(204,340,238,0.12)",
+                "fill-outline-color": "rgba(204,340,238,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-waterway_label-fill-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-housenum_label-fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(374,170,102,0.12)",
+                "fill-outline-color": "rgba(374,170,102,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-housenum_label-fill-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-terrain-v2-landcover-fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(102,102,272,0.12)",
+                "fill-outline-color": "rgba(102,102,272,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-terrain-v2-landcover-fill-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-terrain-v2-hillshade-fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(136,391,238,0.12)",
+                "fill-outline-color": "rgba(136,391,238,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-terrain-v2-hillshade-fill-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-terrain-v2-contour-fill",
+            "interactive": true,
+            "paint": {
+                "fill-color": "rgba(357,68,187,0.12)",
+                "fill-outline-color": "rgba(357,68,187,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-terrain-v2-contour-fill-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-landuse-line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(221,85,391,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-landuse-line-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-waterway-line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(204,374,340,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-waterway-line-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-water-line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(204,374,238,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-water-line-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-aeroway-line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(221,85,136,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-aeroway-line-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-barrier_line-line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(323,374,170,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-barrier_line-line-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-building-line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(136,289,102,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-building-line-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-landuse_overlay-line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(221,391,187,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-landuse_overlay-line-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-tunnel-line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(102,68,238,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-tunnel-line-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-road-line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(255,204,68,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-road-line-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-bridge-line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(136,357,85,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-bridge-line-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-admin-line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(289,153,119,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-admin-line-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-country_label-line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(306,68,85,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-country_label-line-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-marine_label-line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(323,289,119,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-marine_label-line-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-state_label-line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(187,323,102,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-state_label-line-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-place_label-line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(204,340,102,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-place_label-line-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-water_label-line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(204,340,238,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-water_label-line-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-poi_label-line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(153,119,289,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-poi_label-line-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-road_label-line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(136,238,255,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-road_label-line-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-waterway_label-line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(204,340,238,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-waterway_label-line-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-housenum_label-line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(374,170,102,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-housenum_label-line-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-terrain-v2-landcover-line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(102,102,272,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-terrain-v2-landcover-line-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-terrain-v2-hillshade-line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(136,391,238,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-terrain-v2-hillshade-line-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-terrain-v2-contour-line",
+            "interactive": true,
+            "paint": {
+                "line-width": 1,
+                "line-color": "rgba(357,68,187,0.75)"
+            },
+            "ref": "mapbox://mapbox.mapbox-terrain-v2-contour-line-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-landuse-linetext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(221,85,391,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-landuse-linetext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-waterway-linetext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(204,374,340,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-waterway-linetext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-water-linetext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(204,374,238,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-water-linetext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-aeroway-linetext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(221,85,136,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-aeroway-linetext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-barrier_line-linetext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(323,374,170,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-barrier_line-linetext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-building-linetext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(136,289,102,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-building-linetext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-landuse_overlay-linetext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(221,391,187,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-landuse_overlay-linetext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-tunnel-linetext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(102,68,238,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-tunnel-linetext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-road-linetext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(255,204,68,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-road-linetext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-bridge-linetext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(136,357,85,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-bridge-linetext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-admin-linetext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(289,153,119,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-admin-linetext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-country_label-linetext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(306,68,85,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-country_label-linetext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-marine_label-linetext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(323,289,119,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-marine_label-linetext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-state_label-linetext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(187,323,102,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-state_label-linetext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-place_label-linetext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(204,340,102,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-place_label-linetext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-water_label-linetext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(204,340,238,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-water_label-linetext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-poi_label-linetext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(153,119,289,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-poi_label-linetext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-road_label-linetext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(136,238,255,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-road_label-linetext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-waterway_label-linetext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(204,340,238,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-waterway_label-linetext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-housenum_label-linetext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(374,170,102,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-housenum_label-linetext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-terrain-v2-landcover-linetext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(102,102,272,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-terrain-v2-landcover-linetext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-terrain-v2-hillshade-linetext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(136,391,238,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-terrain-v2-hillshade-linetext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-terrain-v2-contour-linetext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(357,68,187,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-terrain-v2-contour-linetext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-landuse-point",
+            "interactive": true,
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgba(221,85,391,1)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-landuse-point-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-waterway-point",
+            "interactive": true,
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgba(204,374,340,1)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-waterway-point-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-water-point",
+            "interactive": true,
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgba(204,374,238,1)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-water-point-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-aeroway-point",
+            "interactive": true,
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgba(221,85,136,1)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-aeroway-point-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-barrier_line-point",
+            "interactive": true,
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgba(323,374,170,1)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-barrier_line-point-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-building-point",
+            "interactive": true,
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgba(136,289,102,1)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-building-point-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-landuse_overlay-point",
+            "interactive": true,
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgba(221,391,187,1)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-landuse_overlay-point-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-tunnel-point",
+            "interactive": true,
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgba(102,68,238,1)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-tunnel-point-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-road-point",
+            "interactive": true,
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgba(255,204,68,1)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-road-point-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-bridge-point",
+            "interactive": true,
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgba(136,357,85,1)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-bridge-point-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-admin-point",
+            "interactive": true,
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgba(289,153,119,1)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-admin-point-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-country_label-point",
+            "interactive": true,
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgba(306,68,85,1)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-country_label-point-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-marine_label-point",
+            "interactive": true,
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgba(323,289,119,1)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-marine_label-point-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-state_label-point",
+            "interactive": true,
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgba(187,323,102,1)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-state_label-point-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-place_label-point",
+            "interactive": true,
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgba(204,340,102,1)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-place_label-point-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-water_label-point",
+            "interactive": true,
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgba(204,340,238,1)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-water_label-point-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-poi_label-point",
+            "interactive": true,
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgba(153,119,289,1)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-poi_label-point-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-road_label-point",
+            "interactive": true,
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgba(136,238,255,1)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-road_label-point-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-waterway_label-point",
+            "interactive": true,
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgba(204,340,238,1)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-waterway_label-point-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-housenum_label-point",
+            "interactive": true,
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgba(374,170,102,1)"
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-housenum_label-point-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-terrain-v2-landcover-point",
+            "interactive": true,
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgba(102,102,272,1)"
+            },
+            "ref": "mapbox://mapbox.mapbox-terrain-v2-landcover-point-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-terrain-v2-hillshade-point",
+            "interactive": true,
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgba(136,391,238,1)"
+            },
+            "ref": "mapbox://mapbox.mapbox-terrain-v2-hillshade-point-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-terrain-v2-contour-point",
+            "interactive": true,
+            "paint": {
+                "circle-radius": 2.5,
+                "circle-color": "rgba(357,68,187,1)"
+            },
+            "ref": "mapbox://mapbox.mapbox-terrain-v2-contour-point-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-landuse-pointtext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(221,85,391,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-landuse-pointtext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-waterway-pointtext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(204,374,340,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-waterway-pointtext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-water-pointtext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(204,374,238,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-water-pointtext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-aeroway-pointtext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(221,85,136,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-aeroway-pointtext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-barrier_line-pointtext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(323,374,170,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-barrier_line-pointtext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-building-pointtext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(136,289,102,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-building-pointtext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-landuse_overlay-pointtext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(221,391,187,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-landuse_overlay-pointtext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-tunnel-pointtext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(102,68,238,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-tunnel-pointtext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-road-pointtext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(255,204,68,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-road-pointtext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-bridge-pointtext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(136,357,85,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-bridge-pointtext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-admin-pointtext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(289,153,119,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-admin-pointtext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-country_label-pointtext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(306,68,85,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-country_label-pointtext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-marine_label-pointtext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(323,289,119,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-marine_label-pointtext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-state_label-pointtext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(187,323,102,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-state_label-pointtext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-place_label-pointtext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(204,340,102,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-place_label-pointtext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-water_label-pointtext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(204,340,238,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-water_label-pointtext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-poi_label-pointtext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(153,119,289,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-poi_label-pointtext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-road_label-pointtext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(136,238,255,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-road_label-pointtext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-waterway_label-pointtext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(204,340,238,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-waterway_label-pointtext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-streets-v6-housenum_label-pointtext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(374,170,102,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-streets-v6-housenum_label-pointtext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-terrain-v2-landcover-pointtext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(102,102,272,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-terrain-v2-landcover-pointtext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-terrain-v2-hillshade-pointtext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(136,391,238,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-terrain-v2-hillshade-pointtext-dim"
+        },
+        {
+            "id": "mapbox://mapbox.mapbox-terrain-v2-contour-pointtext",
+            "interactive": true,
+            "paint": {
+                "text-color": "rgba(357,68,187,1)",
+                "text-halo-color": "#000",
+                "text-halo-width": 1.2
+            },
+            "ref": "mapbox://mapbox.mapbox-terrain-v2-contour-pointtext-dim"
+        }
+    ],
+    "created": "2015-12-03T08:56:34.976Z",
+    "id": "cihq0db4p001ub0kpmt63g2li",
+    "modified": "2015-12-03T08:56:34.976Z",
+    "owner": "maper",
+    "draft": false
+}
